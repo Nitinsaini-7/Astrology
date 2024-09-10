@@ -27,10 +27,10 @@ const data = [
 const Product = () => {
   let settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
@@ -39,25 +39,25 @@ const Product = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
-        },
+          dots: true
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
-        },
+          initialSlide: 2
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -73,18 +73,23 @@ const Product = () => {
       <div className="w-10/12 m-auto slider-container">
         <Slider {...settings}>
           {data.map((item, index) => {
-            return(
-                <div key={index}>
-              <img src={item.image} alt="" />
-
-              <div>
-                <p>{item.title}</p>
+            return (
+              <div className="flex gap-4 p-5">
+                <div key={index} className="bg-white">
+                  <img src={item.image} alt="" className="h-52 w-full"/>
+                
+                  <div className="text-center grid place-items-center py-2 px-2 h-24">
+                    
+                  <div >
+                    <p className="text-black">{item.title}</p>
+                  </div>
+                  <div>
+                    <p className="text-black">{item.price}</p>
+                  </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p>{item.price}</p>
-              </div>
-            </div>
-            )
+            );
           })}
         </Slider>
       </div>

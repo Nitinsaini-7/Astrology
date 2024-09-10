@@ -6,23 +6,23 @@ import Slider from "react-slick";
 
 const data = [
   {
-    image: "/astro-video1.png",
+    link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Horoscope Today",
   },
   {
-    image: "/astro-video2.png",
+    link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Exclusive Video of Daily Horoscope",
   },
   {
-    image: "/astro-video3.png",
+    link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Ram Siya Ram",
   },
   {
-    image: "/astro-video2.png",
-    title: "Samsung 5G Phone",
+    image: "https://www.youtube.com/embed/UBOj6rqRUME",
+    title: "Horoscope Today",
   },
   {
-    image: "/astro-video3.png",
+    link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Ram Siya Ram",
   },
 ];
@@ -33,7 +33,7 @@ function AstrologyVideo() {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
           {
@@ -82,10 +82,7 @@ function AstrologyVideo() {
                     className="rounded-lg  shadow-md hover:scale-110 duration-300"
                   >
                     <div className="">
-                      <img
-                        src={item.image}
-                        className="w-full object-contain block m-auto "
-                      />
+                     <iframe src={item.link} frameborder="0" className="w-full object-contain block m-auto "></iframe>
                     </div>
 
                     <div className="bg-white h-20 flex items-center justify-center">
