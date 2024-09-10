@@ -37,8 +37,8 @@ const Hero = () => {
 
   return (
     <div className="bg-white w-full">
-      <section className="relative bg-[url(/a3.jpg)] bg-cover bg-center bg-no-repeat h-screen">
-        <div className="absolute inset-0 bg-black md:bg-opacity-20 bg-opacity-40"></div>
+      <section className="relative bg-[url(/a2.jpg)] bg-cover bg-center bg-no-repeat h-screen">
+        <div className="absolute inset-0 bg-black md:bg-opacity-50 bg-opacity-40"></div>
 
         <div className="relative md:pt-44 mx-auto max-w-screen-xl md:flex md:justify-center md:items-center px-4 py-32 sm:px-6 lg:flex  lg:items-center lg:justify-center lg:gap-40 lg:px-8">
           <div>
@@ -56,7 +56,7 @@ const Hero = () => {
 
             <div className="mt-2 md:mt-10 flex flex-wrap gap-4 items-center justify-center">
               <Link
-                to={''}
+                to={'/signin'}
                 className="block w-full rounded bg-yellow-500 px-12 py-3 text-sm font-medium text-white shadow border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 focus:outline-none sm:w-auto"
               >
                 Get Started

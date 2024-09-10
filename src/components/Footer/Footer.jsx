@@ -17,7 +17,7 @@ const Footer = () => {
               cupiditate quae nam molestias.
             </p>
 
-            <ul className="mt-8 flex gap-6">
+            <ul className="mt-8 flex gap-4">
 
               <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
@@ -46,7 +46,7 @@ const Footer = () => {
 
             <div className="mt-8">
                 <p className="text-white">Download Our Apps</p>
-            <ul className="mt-2 flex gap-6">
+            <ul className="mt-2 flex gap-4">
             <Link>
                 <li className="">
                   <img src="/playstore.webp" alt="" className="w-32 border-white border rounded-md" />
