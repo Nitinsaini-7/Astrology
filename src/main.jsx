@@ -19,6 +19,7 @@ import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
 import KundliMatching from "./components/Kundali/KundaliMatching/KundaliMatching";
 import JanamKundali from "./components/Kundali/JanamKundali/JanamKundali";
+import Error from "./Error";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,12 +29,12 @@ const router = createBrowserRouter(
         <Route path="/our" element={<OurAstrologer />} />
         <Route path="courses" element={<AstrologyVideo />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/kundali-matching" element={<KundliMatching />} />
+        <Route path="/janam-kundali" element={<JanamKundali />} />
       </Route>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/kundali-matching" element={<KundliMatching/>} />
-        <Route path="/janam-kundali" element={<JanamKundali/>} />
-
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="*" element={<Error />} />
     </Route>
   )
 );
