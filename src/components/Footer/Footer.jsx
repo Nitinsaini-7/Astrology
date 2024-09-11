@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-950">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+    <footer className="bg-zinc-900">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <div>
+          <div className="grid md:place-items-start place-items-center">
             <div className="text-yellow-500">
               <img src="/N (2).png" alt="" className="w-20 rounded-full" />
               <p className="text-2xl font-bold">Astroway</p>
             </div>
 
-            <p className="mt-4 max-w-xs text-white">
+            <p className="mt-4 max-w-xs text-white md:text-left text-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
               cupiditate quae nam molestias.
             </p>
@@ -63,25 +63,25 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+          <div className="grid text-center grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="font-medium text-white">Services</p>
+              <p className="font-medium text-white">Get Advice On</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     1on1 Coaching{" "}
                   </a>
                 </li>
-P
+
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Company Review{" "}
@@ -91,7 +91,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accounts Review{" "}
@@ -101,7 +101,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     HR Consulting{" "}
@@ -111,7 +111,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     SEO Optimisation{" "}
@@ -127,7 +127,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     About{" "}
@@ -137,7 +137,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Meet the Team{" "}
@@ -147,7 +147,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accounts Review{" "}
@@ -163,7 +163,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Contact{" "}
@@ -173,7 +173,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     FAQs{" "}
@@ -183,7 +183,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Live Chat{" "}
@@ -199,7 +199,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accessibility{" "}
@@ -209,7 +209,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Returns Policy{" "}
@@ -219,7 +219,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Refund Policy{" "}
@@ -229,7 +229,7 @@ P
                 <li>
                   <a
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Hiring Statistics{" "}
@@ -239,8 +239,8 @@ P
             </div>
           </div>
         </div>
-
-        <p className="text-xs text-white">
+    <hr />
+        <p className="text-xs text-white text-center">
           &copy; 2022. Company Name. All rights reserved.
         </p>
       </div>

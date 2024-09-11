@@ -1,6 +1,6 @@
 export const links = [
     {
-      name: "Men",
+      name: "Astrology Online",
       submenu: true,
       sublinks: [
         {
@@ -57,7 +57,7 @@ export const links = [
       ],
     },
     {
-      name: "Women",
+      name: "Astrology",
       submenu: true,
       sublinks: [
         {
@@ -114,7 +114,65 @@ export const links = [
       ],
     },
     {
-      name: "Kid's",
+      name: "Horoscope",
+      submenu: true,
+      sublinks: [
+        {
+          Head: "Topwear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+        {
+          Head: "Bottomwear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+        {
+          Head: "innerwear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+  
+        {
+          Head: "sleepwear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+        {
+          Head: "footwear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+            { name: "formal shirts", link: "/" },
+          ],
+        },
+      ],
+    },
+
+    {
+      name: "Panchang",
       submenu: true,
       sublinks: [
         {

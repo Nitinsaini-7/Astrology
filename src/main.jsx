@@ -17,6 +17,8 @@ import Product from "./components/Products/Product";
 import Footer from "./components/Footer/Footer";
 import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
+import KundliMatching from "./components/Kundali/KundaliMatching/KundaliMatching";
+import JanamKundali from "./components/Kundali/JanamKundali/JanamKundali";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +31,8 @@ const router = createBrowserRouter(
       </Route>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/kundali-matching" element={<KundliMatching/>} />
+        <Route path="/janam-kundali" element={<JanamKundali/>} />
 
     </Route>
   )

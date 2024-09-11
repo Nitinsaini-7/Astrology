@@ -14,9 +14,9 @@ const Navbar = () => {
             <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
         </div>
-        <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
+        <ul className="md:flex ml-64 hidden uppercase items-center gap-2">
           <li>
-            <Link to="/" className="py-7 px-3 inline-block">
+            <Link to="/" className=" px-3 inline-block">
               Home
             </Link>
           </li>

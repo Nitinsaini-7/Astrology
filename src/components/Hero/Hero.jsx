@@ -4,7 +4,8 @@ import OurAstrologer from "../OurAstrologers/OurAstrologer";
 import AstrologyVideo from "../AstrologyVideo/AstrologyVideo";
 import Product from "../Products/Product";
 import Blog from "../Blog/Blog";
-import Footer from "../Footer/Footer";
+import WhatAstrology from "../WhatAstrology/WhatAstrology";
+import WhyAstrology from "../WhyAstrology/WhyAstrology";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
@@ -78,6 +79,10 @@ const Hero = () => {
       <AstrologyVideo></AstrologyVideo>
       <Product></Product>
       <Blog></Blog>
+      <WhatAstrology></WhatAstrology>
+      <WhyAstrology/>
+      
+
     </div>
   );
 };
