@@ -8,8 +8,9 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white bg-opacity-50 backdrop-blur-md shadow-md  fixed w-full top-0 left-0 z-10 ">
       <div className="flex items-center font-medium justify-around">
-        <div className="z-10 p-5 md:w-auto w-full flex justify-between">
-          <img src='/N (2).png' alt="logo" className="md:cursor-pointer h-9 rounded-full" />
+        <div className="z-10 p-5 md:w-auto w-full flex justify-between items-center gap-2">
+          <img src='/N (2).png' alt="logo" className="md:cursor-pointer h-10 rounded-full" />
+          <span className="text-xl">Naunidh Astro</span>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
