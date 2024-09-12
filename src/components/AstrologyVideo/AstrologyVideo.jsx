@@ -10,19 +10,19 @@ const data = [
     title: "Horoscope Today",
   },
   {
-    link: "https://www.youtube.com/embed/UBOj6rqRUME",
+    // link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Exclusive Video of Daily Horoscope",
   },
   {
-    link: "https://www.youtube.com/embed/UBOj6rqRUME",
+    // link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Ram Siya Ram",
   },
   {
-    image: "https://www.youtube.com/embed/UBOj6rqRUME",
+    // image: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Horoscope Today",
   },
   {
-    link: "https://www.youtube.com/embed/UBOj6rqRUME",
+    // link: "https://www.youtube.com/embed/UBOj6rqRUME",
     title: "Ram Siya Ram",
   },
 ];
@@ -32,7 +32,7 @@ function AstrologyVideo() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
@@ -64,7 +64,7 @@ function AstrologyVideo() {
       };
 
   return (
-    <div className="bg-yellow-100 pb-10">
+    <div className=" pb-10">
       <div className="flex items-center justify-center py-10">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">Astrology Videos</h1>
@@ -72,13 +72,13 @@ function AstrologyVideo() {
       </div>
 
       <div className="">
-        <div className="w-10/12 m-auto slider-container">
+        <div className="w-4/5 m-auto slider-container">
           <Slider {...settings}>
             {data.map((item, index) => {
               return (
-                <div className="p-4">
+                <div key={index} className="p-4">
                   <div
-                    key={index}
+                    
                     className="rounded-lg  shadow-md hover:scale-110 duration-300"
                   >
                     <div className="">

@@ -2,14 +2,14 @@ import React from "react";
 
 const WhatAstrology = () => {
   return (
-    <div>
+    <div className="mx-4">
       <div className="flex items-center justify-center py-10 ">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">What Is Astrology?</h1>
         <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
       </div>
 
-      <div className="w-full bg-white px-6 py-6 my-8 ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">
+      <div className="w-full bg-slate-100 px-6 py-6 my-8 ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">
         <details className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
             <span className="text-black">Know what is Astrology ?</span>

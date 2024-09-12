@@ -61,11 +61,11 @@ const Product = () => {
   };
 
   return (
-    <div className="bg-yellow-200">
+    <div className="">
       <div className="flex items-center justify-center py-10">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
-          Astrology Videos
+          Our Products
         </h1>
         <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
       </div>
@@ -74,8 +74,8 @@ const Product = () => {
         <Slider {...settings}>
           {data.map((item, index) => {
             return (
-              <div className="flex gap-4 p-5">
-                <div key={index} className="bg-white">
+              <div key={index} className="flex gap-4 p-5">
+                <div  className="bg-white">
                   <img src={item.image} alt="" className="h-52 w-full"/>
                 
                   <div className="text-center grid place-items-center py-2 px-2 h-24">

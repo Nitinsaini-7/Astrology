@@ -64,7 +64,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="bg-yellow-200">
+    <div className="">
       <div className="flex items-center justify-center py-10 ">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">Our Blog</h1>
@@ -75,8 +75,8 @@ const Blog = () => {
         <Slider {...settings}>
           {data.map((item, index) => {
             return (
-              <div className="flex gap-4 p-5 hover:scale-105 cursor-pointer duration-300">
-                <div key={index} className="bg-white">
+              <div key={index} className="flex gap-4 p-5 hover:scale-105 cursor-pointer duration-300">
+                <div  className="bg-white">
                   <img src={item.image} alt="" className="h-52 w-full" />
 
                   <div className="text-center grid place-items-center py-4 px-2">

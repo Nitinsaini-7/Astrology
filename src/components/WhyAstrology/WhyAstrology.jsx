@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyAstrology = () => {
   return (
-    <div>
+    <div className="mx-4 pb-4">
       <div className="flex items-center justify-center py-10 ">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
@@ -18,7 +18,7 @@ const WhyAstrology = () => {
       </div>
       
       <div className="">
-      <div className="w-full bg-white px-6 pb-8 my-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">
+      <div className="w-full bg-slate-100 px-6 pb-8 my-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">
         <div className="mx-auto px-5">
           <div className="mx-auto grid max-w-6xl divide-y divide-neutral-200">
             <div className="py-5">

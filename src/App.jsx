@@ -1,22 +1,28 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
-import AstrologyVideo from './components/AstrologyVideo/AstrologyVideo'
-import OurAstrologer from './components/OurAstrologers/OurAstrologer'
-import Product from './components/Products/Product'
-import Footer from './components/Footer/Footer'
-import { Outlet } from 'react-router-dom'
-// import { Component } from './components/Hero/Hero'
-
+import React from "react";
+import Hero from "./components/Hero/Hero";
+import OurAstrologer from "./components/OurAstrologers/OurAstrologer";
+import AstrologyVideo from "./components/AstrologyVideo/AstrologyVideo";
+import Product from "./components/Products/Product";
+import Blog from "./components/Blog/Blog";
+import WhatAstrology from "./components/WhatAstrology/WhatAstrology";
+import WhyAstrology from "./components/WhyAstrology/WhyAstrology";
 
 const App = () => {
   return (
-    <div className="">
-      <Navbar></Navbar>
-      <Outlet></Outlet>
-      <Footer></Footer>
+    <div>
+      <Hero/>
+      <div className="relative bg-[url(/back.jpg)] bg-cover w-full bg-fixed">
+        <div className="bg-yellow-500 bg-opacity-40">
+          <OurAstrologer/>
+          <AstrologyVideo/>
+          <Product/>
+          <Blog/>
+          <WhatAstrology/>
+          <WhyAstrology/>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

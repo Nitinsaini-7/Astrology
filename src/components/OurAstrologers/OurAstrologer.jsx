@@ -46,7 +46,7 @@ const OurAstrologer = () => {
       </div>
 
       <div>
-        <p className="text-center">
+        <p className="text-center text-black">
           Get in touch with the best Online Astrologers, anytime & anywhere!
         </p>
       </div>
@@ -59,12 +59,12 @@ const OurAstrologer = () => {
           >
             <div>
               <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center w-14 h-14 rounded-full shadow-md">
+                <div className="flex items-center justify-center bg-white w-14 h-14 rounded-full shadow-md">
                   <img src={item.image} alt="" className="w-10" />
                 </div>
               </div>
 
-              <div className="text-sm text-center flex items-center justify-center">
+              <div className="text-sm text-center flex items-center justify-center text-black">
                 <Link to={item.link} className="w-28">{item.title}</Link>
               </div>
             </div>

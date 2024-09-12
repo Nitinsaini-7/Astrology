@@ -18,26 +18,28 @@ const Footer = () => {
             </p>
 
             <ul className="mt-8 flex gap-4">
-
               <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
                   <img src="/facebook.png" alt="" className="w-8" />
                 </li>
               </Link>
-             
+
               <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
                   <img src="/x.png" alt="" className="w-8" />
                 </li>
-              </Link><Link>
+              </Link>
+              <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
                   <img src="/instagram.png" alt="" className="w-8" />
                 </li>
-              </Link><Link>
+              </Link>
+              <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
                   <img src="/youtube.png" alt="" className="w-8" />
                 </li>
-              </Link><Link>
+              </Link>
+              <Link>
                 <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
                   <img src="/linkedin.png" alt="" className="w-8" />
                 </li>
@@ -45,21 +47,28 @@ const Footer = () => {
             </ul>
 
             <div className="mt-8">
-                <p className="text-white">Download Our Apps</p>
-            <ul className="mt-2 flex gap-4">
-            <Link>
-                <li className="">
-                  <img src="/playstore.webp" alt="" className="w-32 border-white border rounded-md" />
-                </li>
-              </Link>
+              <p className="text-white">Download Our Apps</p>
+              <ul className="mt-2 flex gap-4">
+                <Link>
+                  <li className="">
+                    <img
+                      src="/playstore.webp"
+                      alt=""
+                      className="w-32 border-white border rounded-md"
+                    />
+                  </li>
+                </Link>
 
-              <Link>
-                <li className="">
-                  <img src="/appstore.webp" alt="" className="w-32 border-white border rounded-md" />
-                </li>
-              </Link>
-            </ul>
-
+                <Link>
+                  <li className="">
+                    <img
+                      src="/appstore.webp"
+                      alt=""
+                      className="w-32 border-white border rounded-md"
+                    />
+                  </li>
+                </Link>
+              </ul>
             </div>
           </div>
 
@@ -121,7 +130,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="font-medium text-white">Company</p>
+              <p className="font-medium text-white">Panchang</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -157,7 +166,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="font-medium text-white">Helpful Links</p>
+              <p className="font-medium text-white">Horoscope</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -193,7 +202,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="font-medium text-white">Legal</p>
+              <p className="font-medium text-white">Useful Links</p>
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -237,9 +246,87 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <p className="font-medium text-white">Astrology</p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Kundali Matching{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Free Janam Kundali{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium text-white">Astrologer Section</p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Astrologer Logint{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Astrologer Registration{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium text-white">Policy</p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Privacy Policy{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Terms Of Use{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-    <hr />
+        <hr />
         <p className="text-xs text-white text-center">
           &copy; 2022. Company Name. All rights reserved.
         </p>
