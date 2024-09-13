@@ -35,6 +35,7 @@ const SignIn = () => {
 
 
   return (
+<<<<<<< HEAD
     <div className="flex items-center justify-center h-screen bg-indigo-500 ">
       <div className="w-2/5 ">
         <div className="flex min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
@@ -48,6 +49,21 @@ const SignIn = () => {
               Sign in to your account
             </h2>
           </div>
+=======
+    <div className="flex items-center justify-center h-screen mx-4">
+     <div className="md:w-2/5 w-full">
+     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
+        <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
+          <img
+            alt="Your Company"
+            src="/N (2).png"
+            className="mx-auto h-20 w-auto rounded-full"
+          />
+          <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Sign in to your account
+          </h2>
+        </div>
+>>>>>>> main
 
           <div className="mt-10 w-full ">
             <form action="#" method="POST" className="space-y-6" onSubmit={handleSubmit}>

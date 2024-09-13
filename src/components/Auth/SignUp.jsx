@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom'
 
 const SignUp = () => {
   return (
+<<<<<<< HEAD
     <div className="flex items-center justify-center h-screen bg-indigo-500">
      <div className="w-2/5 ">
      <div className="flex w-full  min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
+=======
+    <div className="flex items-center justify-center h-screen mx-4">
+     <div className="md:w-2/5 w-full">
+     <div className="flex w-full  min-h-full flex-1 flex-col justify-center px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
+>>>>>>> main
         <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
           <img
             alt="Your Company"
