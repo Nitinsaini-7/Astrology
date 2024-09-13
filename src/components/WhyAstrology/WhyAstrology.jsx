@@ -6,7 +6,7 @@ const WhyAstrology = () => {
       <div className="flex items-center justify-center py-10 ">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
-          WHY ASTROWAY?
+        Naunidh ?
         </h1>
         <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
       </div>
@@ -42,7 +42,7 @@ const WhyAstrology = () => {
                   </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 bg-slate-50 rounded-lg text-justify p-2 text-gray-500">
-                  Astroway helps you connect with the best online Astrologers in
+                  Naunidh helps you connect with the best online Astrologers in
                   India who will guide you through all the problems of your life
                   and provide answers to all your queries through accurate
                   Astrology predictions. Be it your love problems or money
@@ -110,7 +110,7 @@ const WhyAstrology = () => {
                   </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 bg-slate-50 rounded-lg text-justify p-2 text-gray-500">
-                  At Astroway, your privacy and security is our top priority. We
+                  At Naunidh, your privacy and security is our top priority. We
                   adopt the highest security standards to keep your data and
                   information secure. We ensure complete anonymity of your
                   personal data, and any other information that you share with

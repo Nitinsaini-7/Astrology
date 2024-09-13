@@ -19,7 +19,7 @@ const JanamKundali = () => {
         </h2>
 
         <p className="py-2">
-          The online Janam Kundali at Astroway is prepared after consulting with
+          The online Janam Kundali at Naunidh is prepared after consulting with
           experienced Astrologers and is absolutely accurate & authentic. Having
           doubts in life? Confused about your future? Simply fill in your
           details and get the online Kundali that will tell you everything about
@@ -125,7 +125,7 @@ const JanamKundali = () => {
                   </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 bg-slate-50 rounded-lg text-justify p-2 text-gray-500">
-                  Astroway helps you connect with the best online Astrologers in
+                  Naunidh helps you connect with the best online Astrologers in
                   India who will guide you through all the problems of your life
                   and provide answers to all your queries through accurate
                   Astrology predictions. Be it your love problems or money
@@ -193,7 +193,7 @@ const JanamKundali = () => {
                   </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 bg-slate-50 rounded-lg text-justify p-2 text-gray-500">
-                  At Astroway, your privacy and security is our top priority. We
+                  At Naunidh, your privacy and security is our top priority. We
                   adopt the highest security standards to keep your data and
                   information secure. We ensure complete anonymity of your
                   personal data, and any other information that you share with

@@ -7,22 +7,22 @@ import { Link } from "react-router-dom";
 const data = [
   {
     image: "/blog1.jpg",
-    title: "How to develop app like astroway",
+    title: "How to develop app like Naunidh",
     text: "lLorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur molestias distinctio blanditiis nobis nam.",
   },
   {
     image: "/blog1.jpg",
-    title: "How to develop app like astroway",
+    title: "How to develop app like Naunidh",
     text: "lLorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur molestias distinctio blanditiis nobis nam.",
   },
   {
     image: "/blog1.jpg",
-    title: "How to develop app like astroway",
+    title: "How to develop app like Naunidh",
     text: "lLorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur molestias distinctio blanditiis nobis nam.",
   },
   {
     image: "/blog1.jpg",
-    title: "How to develop app like astroway",
+    title: "How to develop app like Naunidh",
     text: "lLorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur molestias distinctio blanditiis nobis nam.",
   },
 ];
