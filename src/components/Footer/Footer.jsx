@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="grid md:place-items-start place-items-center">
             <div className="text-yellow-500">
               <img src="/N (2).png" alt="" className="w-20 rounded-full" />
-              <p className="text-2xl font-bold">Astroway</p>
+              <p className="text-2xl font-bold">Naumidh</p>
             </div>
 
             <p className="mt-4 max-w-xs text-white md:text-left text-center">
