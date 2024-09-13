@@ -22,7 +22,7 @@ const KundaliMatchingForm = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-white p-8 rounded-lg shadow-[rgba(0,_0,_0,_0.2)_0px_0px_60px] w-full max-w-3xl mx-5">
+      <div className="bg-white p-8 rounded-lg shadow-[rgba(0,_0,_0,_0.2)_0px_0px_60px] w-full max-w-3xl">
         <h2 className="text-2xl font-bold mb-6 text-center">Astrology Form</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

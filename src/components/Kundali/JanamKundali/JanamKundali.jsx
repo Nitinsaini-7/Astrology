@@ -3,7 +3,7 @@ import JanamKundaliForm from "./JanamKundaliForm";
 
 const JanamKundali = () => {
   return (
-    <div>
+    <div className="mt-14">
       <div className="flex items-center justify-center py-10 ">
         <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">

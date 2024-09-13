@@ -78,53 +78,53 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     1on1 Coaching{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Company Review{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accounts Review{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     HR Consulting{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     SEO Optimisation{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -134,33 +134,33 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to='/about'
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     About{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Meet the Team{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accounts Review{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -170,33 +170,33 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to='/contact'
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Contact{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     FAQs{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Live Chat{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -206,43 +206,43 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Accessibility{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Returns Policy{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Refund Policy{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Hiring Statistics{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -252,23 +252,23 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/kundali-matching"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Kundali Matching{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/janam-kundali"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Free Janam Kundali{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -278,23 +278,23 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/signin"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Astrologer Logint{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/signup"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Astrologer Registration{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -304,23 +304,23 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Privacy Policy{" "}
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
                     Terms Of Use{" "}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

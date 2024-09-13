@@ -3,7 +3,15 @@ import KundaliMatchingForm from "./KundaliMatchingForm";
 
 const KundliMatching = () => {
   return (
-    <div className="mt-20 md:mx-10 mx-5">
+    <div className="mt-14 md:mx-10 mx-5">
+      <div className="flex items-center justify-center py-10">
+        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
+        <h1 className="text-3xl font-bold uppercase text-black">
+          Kundali Matching
+        </h1>
+        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+      </div>
+
       <div className="text-center">
         <h2 className="text-2xl font-semibold uppercase">
           Kundli Matching | Kundali Match for Marriage | Horoscope Matching
@@ -52,16 +60,28 @@ const KundliMatching = () => {
       <KundaliMatchingForm></KundaliMatchingForm>
 
       <div className="text-center mt-10">
-        <h2 className="text-2xl font-semibold uppercase">Kundali Matching Analysis</h2>
-        <p className="py-2">Got the Patrika Matching analysis, but not sure about what it means. Rest assured, connect with expert astrologers instantly over call or chat to ensure minute details about your compatibility and also receive recommendations to fix any issues that might hinder in marital life.</p>
+        <h2 className="text-2xl font-semibold uppercase">
+          Kundali Matching Analysis
+        </h2>
+        <p className="py-2">
+          Got the Patrika Matching analysis, but not sure about what it means.
+          Rest assured, connect with expert astrologers instantly over call or
+          chat to ensure minute details about your compatibility and also
+          receive recommendations to fix any issues that might hinder in marital
+          life.
+        </p>
         <p>Connect with astrologers now!</p>
       </div>
 
       <div className="my-10">
-        <h2 className="text-2xl font-semibold text-center uppercase">Online Kundali Matching Process (How it works?)</h2>
+        <h2 className="text-2xl font-semibold text-center uppercase">
+          Online Kundali Matching Process (How it works?)
+        </h2>
 
         <div className="">
-          <p className="py-2">The process for Kundli Milan for marriage works as follows -</p>
+          <p className="py-2">
+            The process for Kundli Milan for marriage works as follows -
+          </p>
           <p className="mb-2">
             <span className="font-bold">Step 1: </span> Enter the details of
             both partners, such as their name, birthdate, birthplace, and birth
@@ -114,13 +134,19 @@ const KundliMatching = () => {
             </button>
           </div>
           <div>
-            <img src="/kundali-matching.png" alt="" className="md:w-60 w-full" />
+            <img
+              src="/kundali-matching.png"
+              alt=""
+              className="md:w-60 w-full"
+            />
           </div>
         </div>
       </div>
 
       <div>
-        <h2 className="text-center text-2xl font-semibold uppercase">Finding the Right Partner Through Kundli Matching</h2>
+        <h2 className="text-center text-2xl font-semibold uppercase">
+          Finding the Right Partner Through Kundli Matching
+        </h2>
         <p className="py-2">
           The Hindu culture has always favored Kundali matching by date of birth
           to check the compatibility among the prospective partners. Let us
