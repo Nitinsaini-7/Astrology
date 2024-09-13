@@ -41,19 +41,19 @@ const SignUp = () => {
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="tel"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Email address
+                Mobile No.
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
                   required
-                  placeholder='Email'
-                  autoComplete="email"
+                  placeholder='Mobile No.'
+                  autoComplete="mobile"
                   className="block w-full focus:outline-none focus:shadow-lg bg-white rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
