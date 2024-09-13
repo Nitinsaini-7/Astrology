@@ -137,6 +137,9 @@ const Footer = () => {
                   <Link
                     to='/about'
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     About{" "}
@@ -255,6 +258,9 @@ const Footer = () => {
                   <Link
                     to="/kundali-matching"
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Kundali Matching{" "}
@@ -265,6 +271,9 @@ const Footer = () => {
                   <Link
                     to="/janam-kundali"
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Free Janam Kundali{" "}
