@@ -83,7 +83,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
-                    1on1 Coaching{" "}
+                    Health{" "}
                   </Link>
                 </li>
 
@@ -93,7 +93,7 @@ const Footer = () => {
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
-                    Company Review{" "}
+                    Maritial Life{" "}
                   </Link>
                 </li>
 
@@ -103,29 +103,44 @@ const Footer = () => {
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
-                    Accounts Review{" "}
+                    Kids{" "}
                   </Link>
                 </li>
-
                 <li>
                   <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
-                    HR Consulting{" "}
+                    Finance & Business{" "}
                   </Link>
-                </li>
-
-                <li>
+                </li> <li>
                   <Link
                     href="#"
                     className="text-gray-400 transition hover:opacity-65"
                   >
                     {" "}
-                    SEO Optimisation{" "}
+                    Education
+{" "}
+                  </Link>
+                </li> <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Career & Job{" "}
+                  </Link>
+                </li> <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 transition hover:opacity-65"
+                  >
+                    {" "}
+                    Love & Relationship{" "}
                   </Link>
                 </li>
+                
               </ul>
             </div>
 
@@ -135,7 +150,29 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to='/about'
+                    to=''
+                    className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
+                  >
+                    {" "}
+                    Today's Panchang{" "}
+                  </Link>
+                </li>
+
+                
+              </ul>
+            </div>
+
+
+            <div>
+              <p className="font-medium text-white">Useful Links</p>
+
+              <ul className="mt-6 space-y-4 text-sm">
+                <li>
+                  <Link
+                    to="/about"
                     className="text-gray-400 transition hover:opacity-65"
                     onClick={() => {
                       window.scroll(0, 0);
@@ -148,105 +185,30 @@ const Footer = () => {
 
                 <li>
                   <Link
-                    href="#"
+                    to='/blog'
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
-                    Meet the Team{" "}
+                    Blog{" "}
                   </Link>
                 </li>
 
                 <li>
                   <Link
-                    href="#"
+                    to="/contact"
                     className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Accounts Review{" "}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium text-white">Horoscope</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <Link
-                    to='/contact'
-                    className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Contact{" "}
                   </Link>
                 </li>
 
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    FAQs{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Live Chat{" "}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium text-white">Useful Links</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Accessibility{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Returns Policy{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Refund Policy{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 transition hover:opacity-65"
-                  >
-                    {" "}
-                    Hiring Statistics{" "}
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -290,6 +252,9 @@ const Footer = () => {
                   <Link
                     to="/signin"
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Astrologer Logint{" "}
@@ -300,6 +265,9 @@ const Footer = () => {
                   <Link
                     to="/signup"
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Astrologer Registration{" "}
@@ -314,8 +282,11 @@ const Footer = () => {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    href="#"
+                    to="/privacy-policy"
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Privacy Policy{" "}
@@ -324,8 +295,11 @@ const Footer = () => {
 
                 <li>
                   <Link
-                    href="#"
+                    to='/terms-conditions'
                     className="text-gray-400 transition hover:opacity-65"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
                   >
                     {" "}
                     Terms Of Use{" "}

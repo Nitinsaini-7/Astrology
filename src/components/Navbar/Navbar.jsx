@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <ul className="md:flex ml-64 hidden uppercase items-center gap-2">
           <li>
-            <Link to="/" className=" px-3 inline-block">
+            <Link to="/" className=" px-3 hover:text-yellow-500 duration-100 inline-block">
               Home
             </Link>
           </li>
@@ -33,7 +33,7 @@ const Navbar = () => {
         {/* Mobile nav */}
         <ul
           className={`
-        md:hidden bg-white text-black fixed w-full max-h-fit top-0 overflow-y-auto bottom-0 py-10 pl-4
+        md:hidden bg-white text-black border-2 border-yellow-500 fixed w-full max-h-fit top-0 overflow-y-auto bottom-0 py-10 pl-4
         duration-500 ${open ? "left-0" : "left-[-100%]"}
         `}
         >
