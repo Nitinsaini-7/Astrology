@@ -40,11 +40,11 @@ const ProductDetails = () => {
   return (
     <div>
       <div className="flex items-center justify-center py-10 mt-14">
-        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
           Product Details
         </h1>
-        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 ml-1"></span>
       </div>
       <div className="grid gap-10 md:mx-24 mb-4">
         {data.map((item, index) => (

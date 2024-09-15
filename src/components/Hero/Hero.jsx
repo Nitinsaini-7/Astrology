@@ -55,9 +55,7 @@ const Hero = () => {
             </p>
 
             <p className="mt-2 max-w-lg text-white md:text-xl text-lg">
-              Consectetur adipiscing elit, sed do eiusmod tempor
-              incididuesdeentiut labore etesde dolore magna aliquapspendisse and
-              the gravida.
+            Explore your astrological chart and gain wisdom from the cosmos to enhance your life's journey.
             </p>
 
             <div className="mt-2 md:mt-10 flex flex-wrap gap-4 items-center justify-center">

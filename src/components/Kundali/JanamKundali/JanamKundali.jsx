@@ -5,11 +5,11 @@ const JanamKundali = () => {
   return (
     <div className="mt-14">
       <div className="flex items-center justify-center py-10 ">
-        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
           Janam Kundali
         </h1>
-        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 ml-1"></span>
       </div>
 
       <div className="text-center mx-5 mb-10">

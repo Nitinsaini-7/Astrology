@@ -24,6 +24,11 @@ const Navbar = () => {
             </Link>
           </li>
           <NavLinks />
+          <li>
+            <Link to="/contact" className=" px-3 hover:text-yellow-500 duration-100 inline-block">
+              Contact
+            </Link>
+          </li>
         </ul>
         <div className="md:block hidden">
         <Link>
@@ -43,6 +48,11 @@ const Navbar = () => {
             </Link>
           </li>
           <NavLinks />
+          <li>
+            <Link to="/contact" className=" px-3 hover:text-yellow-500 duration-100 inline-block">
+              Contact
+            </Link>
+          </li>
           <div className="py-5">
             <Link>
               <button className="p-2 border-2 border-yellow-500 text-yellow-500 duration-300 hover:text-white rounded-full hover:bg-yellow-500">Chat With Astrologer</button>

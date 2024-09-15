@@ -4,9 +4,9 @@ const WhatAstrology = () => {
   return (
     <div className="mx-4">
       <div className="flex items-center justify-center py-10 ">
-        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">What Is Astrology?</h1>
-        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 ml-1"></span>
       </div>
 
       <div className="w-full bg-slate-100 px-6 py-6 my-8 ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">

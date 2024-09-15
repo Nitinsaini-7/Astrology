@@ -27,23 +27,8 @@ export const links = [
       {
         
         sublink: [
-          { name: "Kundali Matching", link: "/" },
-          { name: "Free Janam Kundali", link: "/" },
-        ],
-      },
-
-    ],
-  },
-  {
-    name: "Horoscope",
-    submenu: true,
-    sublinks: [
-      {
-       
-        sublink: [
-          { name: "Daily Horoscope", link: "/" },
-          { name: "Weekly Horoscope", link: "/" },
-          { name: "Yearly Horoscope", link: "/" },
+          { name: "Kundali Matching", link: "/kundali-matching" },
+          { name: "Free Janam Kundali", link: "/janam-kundali" },
         ],
       },
 
