@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="grid md:place-items-start place-items-center">
-            <div className="text-yellow-500">
+            <div className="text-yellow-500 grid md:place-items-start place-items-center">
               <img src="/N (2).png" alt="" className="w-20 rounded-full" />
               <p className="text-2xl font-bold">Naunidh Astro</p>
             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
             </ul>
 
             <div className="mt-8">
-              <p className="text-white">Download Our Apps</p>
+              <p className="text-white md:text-left text-center">Download Our Apps</p>
               <ul className="mt-2 flex gap-4">
                 <Link>
                   <li className="">
