@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 const data = [
   {
     image: "/product1.png",
@@ -39,25 +40,25 @@ const Product = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -75,17 +76,26 @@ const Product = () => {
           {data.map((item, index) => {
             return (
               <div key={index} className="flex gap-4 p-5">
-                <div  className="bg-white">
-                  <img src={item.image} alt="" className="h-52 w-full"/>
-                
-                  <div className="text-center grid place-items-center py-2 px-2 h-24">
-                    
-                  <div >
-                    <p className="text-black">{item.title}</p>
-                  </div>
-                  <div>
-                    <p className="text-black">{item.price}</p>
-                  </div>
+                <div className="bg-white">
+                  <img src={item.image} alt="" className="h-52 w-full" />
+
+                  <div className="text-center grid place-items-center py-2 px-2">
+                    <div>
+                      <p className="text-black">{item.title}</p>
+                    </div>
+                    <div>
+                      <p className="text-black">{item.price}</p>
+                    </div>
+                    <Link
+                      to="/product-details"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    >
+                      <button className="border border-yellow-500 text-yellow-500 p-2 rounded-full hover:bg-yellow-500 hover:text-white duration-300">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

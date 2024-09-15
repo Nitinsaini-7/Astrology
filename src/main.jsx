@@ -23,6 +23,7 @@ import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import PrivacyPolicy from "./components/Policy/PrivacyPolicy";
 import TermsConditions from "./components/Policy/TermsConditions";
+import ProductDetails from "./components/Products/ProductDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +32,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<App />} />
         <Route path="" element={<OurAstrologer />} />
         <Route path="" element={<AstrologyVideo />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/kundali-matching" element={<KundliMatching />} />
         <Route path="/janam-kundali" element={<JanamKundali />} />
