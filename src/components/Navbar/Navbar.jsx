@@ -43,13 +43,13 @@ const Navbar = () => {
         `}
         >
           <li>
-            <Link to="/" className="py-7 px-3 inline-block">
+            <Link to="/" className="py-7 px-3 hover:text-yellow-500 duration-100 inline-block">
               Home
             </Link>
           </li>
           <NavLinks />
           <li>
-            <Link to="/contact" className=" px-3 hover:text-yellow-500 duration-100 inline-block">
+            <Link to="/contact" className=" py-7 px-3 hover:text-yellow-500 duration-100 inline-block">
               Contact
             </Link>
           </li>
