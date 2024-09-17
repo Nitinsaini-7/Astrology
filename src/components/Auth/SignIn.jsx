@@ -5,7 +5,7 @@ const SignIn = () => {
 
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
-  //const [responseMessage, setResponseMessage] = useState('');
+  const [responseMessage, setResponseMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from reloading the page
