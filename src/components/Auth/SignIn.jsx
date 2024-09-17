@@ -121,7 +121,7 @@ const SignIn = () => {
                 to={'/signup'}
                 className="mx-1 font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
               >
-                Sign up
+                Create an account
               </Link>
             </p>
           </div>

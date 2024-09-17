@@ -13,7 +13,7 @@ const SignUp = () => {
             className="mx-auto h-20 w-auto rounded-full"
           />
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign up to your account
+            Create an account
           </h2>
         </div>
 
