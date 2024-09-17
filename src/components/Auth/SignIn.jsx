@@ -5,15 +5,14 @@ const SignIn = () => {
 
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
-  const [responseMessage, setResponseMessage] = useState('');
+  //const [responseMessage, setResponseMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from reloading the page
 
-    const data = { phone, password };
 
     try {
-      const response = await fetch('http://ec2-52-66-236-58.ap-south-1.compute.amazonaws.com:8201/naunidh/astro_signin', {
+      const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,6 +23,7 @@ const SignIn = () => {
 
       if (response.ok) {
         setResponseMessage('Sign-up successful!');
+        console.log(result);
         // Optionally: save a token or navigate the user
       } else {
         setResponseMessage(`Error: ${result.message}`);
@@ -35,8 +35,8 @@ const SignIn = () => {
 
 
   return (
-    <div className="flex items-center justify-center h-screen ">
-      <div className="md:w-2/5 w-full mx-4">
+    <div className="flex items-center justify-center h-screen bg-indigo-500 ">
+      <div className="w-2/5 ">
         <div className="flex min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
           <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
             <img
