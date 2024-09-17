@@ -7,6 +7,8 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  HashRouter,
+  createHashRouter
 } from "react-router-dom";
 import OurAstrologer from "./components/OurAstrologers/OurAstrologer";
 import AstrologyVideo from "./components/AstrologyVideo/AstrologyVideo";
@@ -25,7 +27,7 @@ import PrivacyPolicy from "./components/Policy/PrivacyPolicy";
 import TermsConditions from "./components/Policy/TermsConditions";
 import ProductDetails from "./components/Products/ProductDetails";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<OutletPage />}>
