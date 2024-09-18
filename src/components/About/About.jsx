@@ -4,19 +4,19 @@ const About = () => {
   return (
     <div className="mt-14">
       <div className="flex items-center justify-center py-10">
-        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
-        <h1 className="text-3xl font-bold uppercase text-black">
+        <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
+        <h1 className="text-2xl font-bold uppercase text-black">
           About Us
         </h1>
-        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 ml-1"></span>
       </div>
 
-      <div className="p-6 mx-4 bg-white">
+      <div className=" mx-4 bg-white">
         <section className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-2xl font-semibold text-gray-800 mb-4">
             About Us: Naunidh Astro
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             Welcome to Naunidh Astro, your premier destination for comprehensive
             and personalized astrological guidance. We are a multi-vendor
             platform that brings together a diverse community of expert
@@ -26,10 +26,10 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Our Mission
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             At Naunidh Astro, our mission is to empower individuals by providing
             accurate, insightful, and accessible astrological services. We aim
             to connect you with trusted and verified astrologers who can help
@@ -38,10 +38,10 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Our Vision
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             We envision a world where everyone can access the wisdom of
             astrology to gain clarity, make informed decisions, and lead
             fulfilling lives. By leveraging technology, we strive to create a
@@ -51,10 +51,10 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             What We Offer
           </h2>
-          <ul className="list-disc space-y-4 text-lg text-gray-600">
+          <ul className="list-disc space-y-4 text-lg text-black">
             <li>
               <h3 className="font-semibold">Diverse Expertise:</h3>
               Naunidh Astro features a curated selection of astrologers, each
@@ -95,10 +95,10 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Our Values
           </h2>
-          <ul className="list-disc list-inside space-y-4 text-lg text-gray-600">
+          <ul className="list-disc list-inside space-y-4 text-lg text-black">
             <li>
               <strong>Integrity:</strong> We uphold the highest standards of
               honesty and transparency in all our interactions.
@@ -120,10 +120,10 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Meet Our Team
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             Naunidh Astro is powered by a passionate team of professionals
             dedicated to bringing you the best in astrology. From our expert
             astrologers to our customer support staff, every member of our team
@@ -133,8 +133,8 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">Join Us</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-2xl font-semibold text-black mb-3">Join Us</h2>
+          <p className="text-lg text-black">
             Discover the power of astrology with Naunidh Astro. Whether you're
             seeking answers, guidance, or simply curious about what the stars
             have in store, we invite you to explore our platform and connect
@@ -143,20 +143,20 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             Have questions or need assistance? Our customer support team is here
             to help. Reach out to us anytime, and we'll be happy to assist you.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+          <h2 className="text-2xl font-semibold text-black mb-3">
             Stay Connected
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-black">
             Follow us on social media for the latest updates, astrological tips,
             and exclusive offers.
           </p>

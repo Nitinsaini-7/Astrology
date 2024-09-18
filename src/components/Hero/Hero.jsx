@@ -55,9 +55,7 @@ const Hero = () => {
             </p>
 
             <p className="mt-2 max-w-lg text-white md:text-xl text-lg">
-              Consectetur adipiscing elit, sed do eiusmod tempor
-              incididuesdeentiut labore etesde dolore magna aliquapspendisse and
-              the gravida.
+            Explore your astrological chart and gain wisdom from the cosmos to enhance your life's journey.
             </p>
 
             <div className="mt-2 md:mt-10 flex flex-wrap gap-4 items-center justify-center">
@@ -69,7 +67,10 @@ const Hero = () => {
               </Link>
 
               <Link
-                to={""}
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+                to="/about"
                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-yellow-500 shadow border-2 border-white hover:bg-transparent hover:text-white focus:outline-none sm:w-auto"
               >
                 Learn More

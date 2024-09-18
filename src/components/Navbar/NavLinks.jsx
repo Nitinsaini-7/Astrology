@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { links } from "./MyLinks"; 
+import { links } from "./MyLinks";
 
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
@@ -11,7 +11,7 @@ const NavLinks = () => {
         <div>
           <div className=" px-2 text-left md:cursor-pointer group">
             <h1
-              className="md:py-0 py-7 flex justify-between items-center md:pr-0 pr-5 group"
+              className="md:py-0 hover:text-yellow-500 duration-100 py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
@@ -35,17 +35,17 @@ const NavLinks = () => {
                   <div className="py-3">
                     <div
                       className="w-4 h-4 left-3 absolute 
-                    mt-1 bg-white rotate-45"
+                    mt-1 bg-yellow-100 rounded-sm  rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white p-5 grid grid-cols-3 gap-10">
+                  <div className="bg-yellow-100 rounded-sm  text-black p-2 px-10 grid grid-cols-1">
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg font-semibold">
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 my-2.5">
+                          <li className="text-sm text-gray-600 hover:text-yellow-500 duration-300 my-2.5">
                             <Link
                               to={slink.link}
                               className="hover:text-primary"
@@ -80,24 +80,10 @@ const NavLinks = () => {
                     className="py-4 pl-7 font-semibold flex justify-between items-center md:pr-0 pr-1"
                   >
                     {slinks.Head}
-
-                    <span className="text-xl md:mt-1 md:ml-2 inline">
-                      <ion-icon
-                        name={`${
-                          subHeading === slinks.Head
-                            ? "chevron-up"
-                            : "chevron-down"
-                        }`}
-                      ></ion-icon>
-                    </span>
                   </h1>
-                  <div
-                    className={`${
-                      subHeading === slinks.Head ? "md:hidden" : "hidden"
-                    }`}
-                  >
+                  <div className="bg-yellow-100 -mt-14 mr-5">
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-8">
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}

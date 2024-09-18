@@ -4,9 +4,17 @@ export const links = [
     submenu: true,
     sublinks: [
       {
-        Head: "Naunidh",
         sublink: [
-          { name: " ", link: "/" },
+          { name: "Talk To Astrologer", link: "/" },
+          { name: "Chat With Astrologer", link: "/" },
+          { name: "Healtjh", link: "/" },
+          { name: "Maritial Life", link: "/" },
+          { name: "Kids", link: "/" },
+          { name: "Education", link: "/" },
+          { name: "Finance & Business", link: "/" },
+          { name: "Career & Job", link: "/" },
+          { name: "Love & Relationship", link: "/" },
+
         ],
       },
 
@@ -17,22 +25,10 @@ export const links = [
     submenu: true,
     sublinks: [
       {
-        Head: "Naunidh",
+        
         sublink: [
-          { name: " ", link: "/" },
-        ],
-      },
-
-    ],
-  },
-  {
-    name: "Horoscope",
-    submenu: true,
-    sublinks: [
-      {
-        Head: "Naunidh",
-        sublink: [
-          { name: " ", link: "/" },
+          { name: "Kundali Matching", link: "/kundali-matching" },
+          { name: "Free Janam Kundali", link: "/janam-kundali" },
         ],
       },
 
@@ -44,9 +40,9 @@ export const links = [
     submenu: true,
     sublinks: [
       {
-        Head: "Naunidh",
+        
         sublink: [
-          { name: " ", link: "/" },
+          { name: "Today's Panchang", link: "/" },
         ],
       },
 

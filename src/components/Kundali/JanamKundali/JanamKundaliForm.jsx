@@ -23,7 +23,7 @@ const JanamKundaliForm = () => {
 
   return (
     <div className="mx-4">
-      <div className="max-w-2xl mx-auto p-6 bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg">
+      <div className="max-w-2xl mx-auto p-6 bg-white shadow-[rgba(0,_0,_0,_0.2)_0px_0px_60px] rounded-lg">
         <h1 className="text-2xl font-bold mb-4">Janam Kundali Form</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">

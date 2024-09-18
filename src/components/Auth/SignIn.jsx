@@ -35,8 +35,8 @@ const SignIn = () => {
 
 
   return (
-    <div className="flex items-center justify-center h-screen bg-indigo-500 ">
-      <div className="w-2/5 ">
+    <div className="flex items-center justify-center h-screen ">
+      <div className="md:w-2/5 w-full mx-4">
         <div className="flex min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
           <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
             <img
@@ -121,7 +121,7 @@ const SignIn = () => {
                 to={'/signup'}
                 className="mx-1 font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
               >
-                Sign up
+                Create an account
               </Link>
             </p>
           </div>

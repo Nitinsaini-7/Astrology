@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const SignUp = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-indigo-500">
-     <div className="w-2/5 ">
+    <div className="flex items-center justify-center h-screen">
+     <div className="md:w-2/5 w-full mx-4">
      <div className="flex w-full  min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
         <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
           <img
@@ -13,7 +13,7 @@ const SignUp = () => {
             className="mx-auto h-20 w-auto rounded-full"
           />
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign up to your account
+            Create an account
           </h2>
         </div>
 
@@ -41,19 +41,19 @@ const SignUp = () => {
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="tel"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Email address
+                Mobile No.
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
                   required
-                  placeholder='Email'
-                  autoComplete="email"
+                  placeholder='Mobile No.'
+                  autoComplete="mobile"
                   className="block w-full focus:outline-none focus:shadow-lg bg-white rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -94,7 +94,7 @@ const SignUp = () => {
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Already have an account? Login 
+            Already have an account? 
             <Link
               to={'/signin'}
               className="mx-1 font-semibold leading-6 text-indigo-600 hover:text-indigo-500"

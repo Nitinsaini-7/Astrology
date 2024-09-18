@@ -4,9 +4,9 @@ const WhatAstrology = () => {
   return (
     <div className="mx-4">
       <div className="flex items-center justify-center py-10 ">
-        <span className=" px-1 py-4 bg-orange-400 mr-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">What Is Astrology?</h1>
-        <span className=" px-1 py-4 bg-orange-400 ml-1"></span>
+        <span className=" px-1 py-4 bg-yellow-500 ml-1"></span>
       </div>
 
       <div className="w-full bg-slate-100 px-6 py-6 my-8 ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-6xl sm:rounded-lg">
@@ -64,15 +64,15 @@ const WhatAstrology = () => {
         </section>
 
         <section className="container mx-auto p-6">
-          <h2 className="text-2xl font-bold mb-4">Online Astrology Consultation Services By Astroway</h2>
+          <h2 className="text-2xl font-bold mb-4">Online Astrology Consultation Services By Naunidh</h2>
           <p className="text-lg mb-4">
-            Astroway has established its footprints in the online Astrology services, helping people get through
+            Naunidh has established its footprints in the online Astrology services, helping people get through
             their life problems. This is done by the best online Astrologers who are experienced and renowned in
             this domain. Our Astrologers are available 24/7 to help people with their Astro advice on the best website
             for Astrology.
           </p>
           <ol className="list-decimal pl-5 mb-4">
-            <li>Download the Astroway app</li>
+            <li>Download the Naunidh app</li>
             <li>Sign up with your basic details</li>
             <li>Enjoy your free session of online Astrology consultation</li>
             <li>Recharge your wallet</li>
