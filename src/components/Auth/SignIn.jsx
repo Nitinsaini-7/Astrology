@@ -10,10 +10,9 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form from reloading the page
 
-    const data = { phone, password };
 
     try {
-      const response = await fetch('http://ec2-52-66-236-58.ap-south-1.compute.amazonaws.com:8201/naunidh/astro_signin', {
+      const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,6 +23,7 @@ const SignIn = () => {
 
       if (response.ok) {
         setResponseMessage('Sign-up successful!');
+        console.log(result);
         // Optionally: save a token or navigate the user
       } else {
         setResponseMessage(`Error: ${result.message}`);
