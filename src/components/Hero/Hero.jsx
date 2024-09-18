@@ -67,7 +67,10 @@ const Hero = () => {
               </Link>
 
               <Link
-                to={""}
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+                to="/about"
                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-yellow-500 shadow border-2 border-white hover:bg-transparent hover:text-white focus:outline-none sm:w-auto"
               >
                 Learn More

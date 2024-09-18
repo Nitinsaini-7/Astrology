@@ -3,60 +3,79 @@ import React from 'react';
 
 const TermsConditions = () => {
   return (
-    <div className="container mx-auto p-4 mt-20">
-      <h1 className="text-3xl font-bold mb-4 text-center">Terms & Conditions</h1>
-      <p className="mb-4">
-        By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trademarks, copyright, database rights, and other intellectual property rights related to it, still belong to Naunidh.
+    <div className="bg-gray-100 p-8 rounded-lg shadow-md mt-14 ">
+    <h1 className="text-3xl font-bold mb-4 text-center">Terms and Conditions</h1>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Acceptance of Terms</h2>
+      <p className="text-gray-700">
+        By downloading, installing, or using the Naunidh Astro app, you agree to these Terms and Conditions and our Privacy Policy.
       </p>
-      <p className="mb-4">
-        By agreeing to these terms, you are also accepting the Privacy Policy of this app.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">User Eligibility</h2>
+      <p className="text-gray-700">
+        Users must be at least 18 years old or have parental/guardian consent to use the app. Users are responsible for providing accurate and updated information.
       </p>
-      <h2 className="text-2xl font-semibold mb-2">Changes to the App</h2>
-      <p className="mb-4">
-        Naunidh is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Services Offered</h2>
+      <p className="text-gray-700">
+        The Naunidh Astro app provides astrological predictions, horoscopes, and related content for entertainment and informational purposes only. It does not guarantee accuracy or outcomes.
       </p>
-      <h2 className="text-2xl font-semibold mb-2">Security</h2>
-      <p className="mb-4">
-        The Naunidh app stores and processes personal data that you have provided to us, in order to provide our Service. It’s your responsibility to keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs, compromise your phone’s security features and it could mean that the Naunidh app won’t work properly or at all.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">User Responsibilities</h2>
+      <p className="text-gray-700">
+        Users are responsible for their interactions within the app, including the accuracy of information provided for astrological readings. Users must not engage in illegal, abusive, or harmful activities.
       </p>
-      <h2 className="text-2xl font-semibold mb-2">Third-Party Services</h2>
-      <p className="mb-4">
-        The app does use third-party services that declare their own Terms and Conditions. Links to Terms and Conditions of third-party service providers used by the app:
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Intellectual Property</h2>
+      <p className="text-gray-700">
+        All content, trademarks, and materials within the Naunidh Astro app are owned or licensed by us and are protected by intellectual property laws. Users may not reproduce, modify, or distribute app content without permission.
       </p>
-      <ul className="list-disc pl-5 mb-4">
-        <li><a href="https://policies.google.com/terms" className="text-blue-500" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
-        <li><a href="https://firebase.google.com/terms" className="text-blue-500" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-        <li><a href="https://www.facebook.com/legal/terms" className="text-blue-500" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-      </ul>
-      <h2 className="text-2xl font-semibold mb-2">Responsibility</h2>
-      <p className="mb-4">
-        You should be aware that there are certain things that Naunidh will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but Naunidh cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Data Accuracy and Security</h2>
+      <p className="text-gray-700">
+        Users are responsible for maintaining the confidentiality of their account information. They must ensure data accuracy and promptly update information as needed.
       </p>
-      <p className="mb-4">
-        If you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third-party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Limitation of Liability</h2>
+      <p className="text-gray-700">
+        We are not liable for any direct, indirect, incidental, or consequential damages arising from app use, including but not limited to loss of data, revenue, or profits.
       </p>
-      <p className="mb-4">
-        Along the same lines, Naunidh cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, Naunidh cannot accept responsibility.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Changes to Terms</h2>
+      <p className="text-gray-700">
+        We reserve the right to modify these Terms and Conditions at any time. Users will be notified of significant changes through app notifications or email.
       </p>
-      <p className="mb-4">
-        With respect to Naunidh’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. Naunidh accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Termination</h2>
+      <p className="text-gray-700">
+        We may terminate or suspend access to the Naunidh Astro app without prior notice if users violate these Terms and Conditions or engage in fraudulent activities.
       </p>
-      <h2 className="text-2xl font-semibold mb-2">Updates and Termination</h2>
-      <p className="mb-4">
-        At some point, we may wish to update the app. The app is currently available on Android & iOS – the requirements for both systems (and for any additional systems we decide to extend the availability of the app to) may change, and you’ll need to download the updates if you want to keep using the app. Naunidh does not promise that it will always update the app so that it is relevant to you and/or works with the Android & iOS version that you have installed on your device. However, you promise to always accept updates to the application when offered to you. We may also wish to stop providing the app, and may terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must stop using the app, and (if needed) delete it from your device.
+    </section>
+
+    <section className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">Governing Law</h2>
+      <p className="text-gray-700">
+        These Terms and Conditions are governed by the laws of [Your Jurisdiction]. Any disputes arising from app use shall be resolved through arbitration or the courts in [Your Jurisdiction].
       </p>
-      <h2 className="text-2xl font-semibold mb-2">Changes to These Terms</h2>
-      <p className="mb-4">
-        We may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Terms and Conditions on this page.
-      </p>
-      <p className="mb-4">
-        These terms and conditions are effective as of 2020-11-04
-      </p>
-      <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
-      <p>
-        If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at <a href="mailto:Naunidhglobal@gmail.com" className="text-blue-500">Naunidhglobal@gmail.com</a>.
-      </p>
-    </div>
+    </section>
+  </div>
   );
 };
 

@@ -7,27 +7,17 @@ import Slider from "react-slick";
 
 const astrologerData = [
   {
-    image: "/astro1.png",
-    name: "Sriram",
+    image: "/astro1.jfif",
+    name: "Neeraj",
+    experience: "4+"
   },
   {
-    image: "/astro2.png",
-    name: "Vansh",
+    image: "/astro2.jfif",
+    name: "Mahesh Chaurasiya",
+    experience: "4+"
   },
-  {
-    image: "/astro3.png",
-    name: "Rahul Roy",
-  },
-  {
-    image: "/astro4.png",
-    name: "Sunil",
-  },
-  {
-    image: "/astro5.png",
-    name: "Vivek Rawal",
-  },
+  
 ];
-
 
 const OurAstrologer = () => {
   const data = [
@@ -39,17 +29,17 @@ const OurAstrologer = () => {
     {
       image: "/ganesha.png",
       title: "Free Janam Kundali",
-      link: "/",
+      link: "/janam-kundali",
     },
     {
       image: "/kundli.png",
       title: "Kundali Matching",
-      link: "/",
+      link: "/kundali-matching",
     },
     {
       image: "/astrology.png",
       title: "Products",
-      link: "/",
+      link: "/product-details",
     },
     {
       image: "/horoscope.png",
@@ -59,7 +49,7 @@ const OurAstrologer = () => {
     {
       image: "/blog.png",
       title: "Astrology Blog",
-      link: "/",
+      link: "/blog",
     },
   ];
 
@@ -67,7 +57,7 @@ const OurAstrologer = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -77,35 +67,32 @@ const OurAstrologer = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div>
       <div className="flex md:items-center md:justify-center p-2 w-full md:gap-20 gap-2 overflow-x-scroll no-scrollbar">
         {data.map((item, index) => (
-          <div
-            key={index}
-            className=""
-          >
+          <div key={index} className="">
             <div>
               <div className="flex items-center justify-center">
                 <div className="flex items-center justify-center bg-white w-14 h-14 rounded-full shadow-md">
@@ -114,7 +101,15 @@ const OurAstrologer = () => {
               </div>
 
               <div className="text-sm text-center flex items-center justify-center text-black">
-                <Link to={item.link} className="w-28">{item.title}</Link>
+                <Link
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                  to={item.link}
+                  className="w-28"
+                >
+                  {item.title}
+                </Link>
               </div>
             </div>
           </div>
@@ -140,20 +135,18 @@ const OurAstrologer = () => {
             {astrologerData.map((item, index) => {
               return (
                 <div key={index} className="p-4">
-                  <div
-                    
-                    className=" bg-white p-2  shadow-md hover:scale-110 duration-300"
-                  >
-                   <div className="flex items-center justify-center">
-                   <div className="bg-slate-300 w-28 h-28 flex items-center justify-center rounded-full">
-                      <img src={item.image} alt="" className="w-20" />
+                  <div className=" bg-white p-2  shadow-md hover:scale-110 duration-300">
+                    <div className="flex items-center justify-center">
+                      <div className="bg-slate-300 w-28 h-28 flex overflow-hidden items-center justify-center rounded-full">
+                        <img src={item.image} alt="" className="w-28 h-28" />
+                      </div>
                     </div>
-                   </div>
 
-                    <div className="bg-white h-20 flex items-center justify-center">
-                      <p className="font-semibold text-blue-500 text-center">
+                    <div className="bg-white h-20 grid">
+                      <p className="font-semibold text-yellow-500 text-center ">
                         {item.name}
                       </p>
+                      <p className="text-center">Experience: {item.experience} Years</p>
                     </div>
                   </div>
                 </div>
@@ -162,8 +155,6 @@ const OurAstrologer = () => {
           </Slider>
         </div>
       </div>
-
-      
     </div>
   );
 };

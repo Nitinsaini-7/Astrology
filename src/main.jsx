@@ -12,7 +12,6 @@ import {
 } from "react-router-dom";
 import OurAstrologer from "./components/OurAstrologers/OurAstrologer";
 import AstrologyVideo from "./components/AstrologyVideo/AstrologyVideo";
-import Product from "./components/Products/Product";
 import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
 import KundliMatching from "./components/Kundali/KundaliMatching/KundaliMatching";
@@ -23,9 +22,12 @@ import App from "./App";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
-import PrivacyPolicy from "./components/Policy/PrivacyPolicy";
 import TermsConditions from "./components/Policy/TermsConditions";
 import ProductDetails from "./components/Products/ProductDetails";
+import Blog2 from "./components/Blog/Blog2";
+import Blog1 from "./components/Blog/Blog1";
+import Blog3 from "./components/Blog/Blog3";
+import Blog4 from "./components/Blog/Blog4";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -40,12 +42,15 @@ const router = createHashRouter(
         <Route path="/janam-kundali" element={<JanamKundali />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/blog-1" element={<Blog1 />} />
+        <Route path="/blog-2" element={<Blog2 />} />
+        <Route path="/blog-3" element={<Blog3 />} />
+        <Route path="/blog-4" element={<Blog4 />} />
+
       </Route>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
-
       <Route path="*" element={<Error />} />
     </Route>
   )
