@@ -1,41 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
+    e.preventDefault(); // Prevent page reload
+    setIsLoading(true); // Set loading state
 
-    const data = { phone, password };
+    const data = {
+      phone: phone,
+      password: password,
+    };
 
     try {
-      const response = await fetch('http://ec2-52-66-236-58.ap-south-1.compute.amazonaws.com:8201/naunidh/astro_signin', {
+      const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+
       const result = await response.json();
 
       if (response.ok) {
-        setResponseMessage('Sign-up successful!');
-        // Optionally: save a token or navigate the user
+        setResponseMessage('Sign-in successful!');
+        console.log(result);
       } else {
         setResponseMessage(`Error: ${result.message}`);
       }
     } catch (error) {
       setResponseMessage('Failed to connect to the server.');
+      console.log(error);
+    } finally {
+      setIsLoading(false); // Reset loading state
     }
   };
 
-
   return (
-    <div className="flex items-center justify-center h-screen ">
+    <div className="flex items-center justify-center h-screen">
       <div className="md:w-2/5 w-full mx-4">
         <div className="flex min-h-full flex-1 flex-col justify-center bg-white px-6 py-8 lg:px-8 shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] rounded-md">
           <div className="sm:mx-auto sm:w-full w-full sm:max-w-sm">
@@ -50,69 +57,56 @@ const SignIn = () => {
           </div>
 
           <div className="mt-10 w-full ">
-            <form action="#" method="POST" className="space-y-6" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Phone Number
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={phone}
-                    required
-                    placeholder="phone"
-                    onChange={(e) => setPhone(e.target.value)}
-                    autoComplete="phone"
-                    className="block w-full focus:outline-none focus:shadow-lg bg-white rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">Phone Number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={phone}
+                  required
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Phone"
+                  className="block w-full focus:outline-none focus:shadow-lg bg-white rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
               </div>
 
-              <div>
-                <div className="flex items-center justify-between ">
-                  <label
-                    htmlFor="password"
-                    className="block text-sm font-medium leading-6 text-gray-900 "
-                  >
-                    Password
-                  </label>
-                  <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
-                </div>
-                <div className="mt-2">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    value={password}
-                    required
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    autoComplete="current-password"
-                    className="block w-full focus:outline-none focus:shadow-lg rounded-md border-0 bg-white p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+              <div >
+                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  value={password}
+                  required
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                 className="block w-full focus:outline-none focus:shadow-lg rounded-md border-0 bg-white p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+
+              <div className="text-right">
+                <Link to="#" className="text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                  Forgot password?
+                </Link>
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="w-full bg-indigo-600 text-white font-semibold rounded-md px-3 py-2 hover:bg-indigo-500 disabled:opacity-50"
+                  disabled={isLoading}
                 >
-                  Sign in
+                  {isLoading ? 'Signing in...' : 'Sign in'}
                 </button>
               </div>
+
+              {responseMessage && (
+                <div className="mt-4 text-center text-sm text-red-500">
+                  {responseMessage}
+                </div>
+              )}
             </form>
 
             <p className="mt-10 text-center text-sm text-gray-500">
@@ -126,6 +120,7 @@ const SignIn = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );
