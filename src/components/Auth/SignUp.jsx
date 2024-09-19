@@ -2,6 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const SignUp = () => {
+
+  const HandleInput = async(e) =>{
+      e.preventDefault();
+      console.log("Working")
+  }
+
   return (
     <div className="flex items-center justify-center h-screen">
      <div className="md:w-2/5 w-full mx-4">
@@ -18,7 +24,7 @@ const SignUp = () => {
         </div>
 
         <div className="mt-10 w-full">
-          <form action="#" method="POST" className="space-y-6">
+          <form action="#" method="POST" className="space-y-6" onSubmit={HandleInput}>
           <div>
               <label
                 htmlFor="email"
