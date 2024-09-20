@@ -9,14 +9,15 @@ const astrologerData = [
   {
     image: "/astro1.jfif",
     name: "Neeraj",
-    experience: "4+"
+    experience: "4+",
+    about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque itaque nulla sunt. Asperiores, ut vel!"
   },
   {
     image: "/astro2.jfif",
     name: "Mahesh Chaurasiya",
-    experience: "4+"
+    experience: "4+",
+    about:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque itaque nulla sunt. Asperiores, ut vel!"
   },
-  
 ];
 
 const OurAstrologer = () => {
@@ -135,18 +136,28 @@ const OurAstrologer = () => {
             {astrologerData.map((item, index) => {
               return (
                 <div key={index} className="p-4">
-                  <div className=" bg-white p-2  shadow-md hover:scale-110 duration-300">
-                    <div className="flex items-center justify-center">
-                      <div className="bg-slate-300 w-28 h-28 flex overflow-hidden items-center justify-center rounded-full">
-                        <img src={item.image} alt="" className="w-28 h-28" />
+                  <div className="bg-white md:rounded-full rounded-3xl p-2 grid md:grid-cols-2 grid-cols-1  shadow-md hover:scale-105 cursor-pointer duration-300">
+                    <div>
+                      <div className="flex items-center justify-center">
+                        <div className="bg-slate-300 w-28 h-28 flex overflow-hidden items-center justify-center rounded-full">
+                          <img src={item.image} alt="" className="w-28 h-28" />
+                        </div>
+                      </div>
+
+                      <div className=" h-20">
+                        <p className="font-semibold text-yellow-500 text-center ">
+                          {item.name}
+                        </p>
+                        <p className="text-center mt-1">
+                          Experience: {item.experience} Years
+                        </p>
                       </div>
                     </div>
-
-                    <div className="bg-white h-20 grid">
-                      <p className="font-semibold text-yellow-500 text-center ">
-                        {item.name}
-                      </p>
-                      <p className="text-center">Experience: {item.experience} Years</p>
+                    <div className="flex items-center justify-center mx-2">
+                      <div>
+                      <p className="text-xl text-yellow-500 font-semibold">About Astrologer -</p>
+                      <p>{item.about}</p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,83 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import OurAstrologer from "../OurAstrologers/OurAstrologer";
-import AstrologyVideo from "../AstrologyVideo/AstrologyVideo";
-import Product from "../Products/Product";
-import Blog from "../Blog/Blog";
-import WhatAstrology from "../WhatAstrology/WhatAstrology";
-import WhyAstrology from "../WhyAstrology/WhyAstrology";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
 
-// const data = [
-//   {
-//     image: "/hero1.png",
-//     title: "Horoscope Today",
-//   },
-//   {
-//     image: "/hero2.png",
-//     title: "Exclusive Video of Daily Horoscope",
-//   },
-//   {
-//     image: "/hero3.png",
-//   },
-// ];
+const data = [
+  {
+    image: "/chat.png",
+    title: "Chat with Astrologer",
+    color: "sky-600"
+  },
+  {
+    image: "telephone.png",
+    title: "Talk to Astrologer",
+    color: "lime-500"
+  },
+  {
+    image: "/cart.png",
+    title: "Astromall Shop",
+    color: "blue-300"
+  },
+  {
+    image: "/kumbh-kalash.png",
+    title: "Book a Pooja",
+    color: "orange-400"
+  },
+];
 
 const Hero = () => {
-  // let settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   speed: 500,
-  //   autoplaySpeed: 3000,
-  //   cssEase: "linear"
-  // };
-
   return (
-    <div className=" w-full pb-2">
+    <div className=" w-full pb-2 -mb-2">
       <section className="relative bg-[url(/a2.jpg)] bg-cover bg-center bg-no-repeat h-screen">
         <div className="absolute inset-0 bg-black md:bg-opacity-50 bg-opacity-40"></div>
 
-        <div className="relative md:pt-44 mx-auto max-w-screen-xl md:flex md:justify-center md:items-center px-4 py-32 sm:px-6 lg:flex  lg:items-center lg:justify-center lg:gap-40 lg:px-8">
-          <div>
+        <div className="relative pt-32  mx-auto max-w-screen-xl md:flex md:justify-center md:items-center px-4  sm:px-6 lg:flex  lg:items-center lg:justify-center lg:gap-40 lg:px-8">
+          <div className="flex items-center justify-center">
             <img
               src="/spin.png"
               alt=""
-              className="md:w-96 w-full animate-spin-slow "
+              className="md:w-80 w-64 animate-spin-slow "
             />
           </div>
           <div className="max-w-xl lg:text-center text-center  md:text-left ltr:sm:text-left rtl:sm:text-right">
-            <p className=" md:text-4xl text-3xl font-bold text-yellow-500 md:backdrop-blur-sm">
+            <p className=" md:text-4xl text-3xl font-bold text-yellow-500">
               Read Your Daily Horoscope Today
             </p>
 
             <p className="mt-2 max-w-lg text-white md:text-xl text-lg">
-            Explore your astrological chart and gain wisdom from the cosmos to enhance your life's journey.
+              Explore your astrological chart and gain wisdom from the cosmos to
+              enhance your life's journey.
             </p>
 
-            <div className="mt-2 md:mt-10 flex flex-wrap gap-4 items-center justify-center">
-              <Link
-                to={"/signin"}
-                className="block w-full rounded bg-yellow-500 px-12 py-3 text-sm font-medium text-white shadow border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 focus:outline-none sm:w-auto"
-              >
-                Get Started
-              </Link>
-
-              <Link
-              onClick={() => {
-                window.scroll(0, 0);
-              }}
-                to="/about"
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-yellow-500 shadow border-2 border-white hover:bg-transparent hover:text-white focus:outline-none sm:w-auto"
-              >
-                Learn More
-              </Link>
-            </div>
+           
           </div>
         </div>
+        <div className="relative w-full mt-10 flex flex-wrap items-center justify-center gap-4 ">
+          {data.map((item) => (
+            <div className={`bg-white md:w-60 md:h-36 w-40 h-36 group p-3 grid place-items-center hover:bg-yellow-500 cursor-pointer duration-300 rounded-lg`}>
+              <div className="flex items-center justify-center shadow-lg bg-white w-16 h-16 p-2 rounded-full">
+
+              <img src={item.image} alt="" className="md:w-14 w-10 "/>
+              </div>
+
+              <p className={`group-hover:text-white text-center text-black`}>{item.title}</p>
+            </div>
+          ))}
+        </div>
+
       </section>
     </div>
   );

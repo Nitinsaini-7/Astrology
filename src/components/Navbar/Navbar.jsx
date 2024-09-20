@@ -32,7 +32,7 @@ const Navbar = () => {
         </ul>
         <div className="md:block hidden">
         <Link>
-              <button className="p-2 border-2 border-yellow-500 text-yellow-500 duration-300 hover:text-white rounded-full hover:bg-yellow-500">Chat With Astrologer</button>
+              <button className="p-2 mx-3 border-2 border-yellow-500 text-yellow-500 duration-300 hover:text-white rounded-full hover:bg-yellow-500">Chat With Astrologer</button>
             </Link>
         </div>
         {/* Mobile nav */}
