@@ -1,38 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
+    e.preventDefault(); // Prevent page reload
+    setIsLoading(true); // Set loading state
 
-    const data = { phone, password };
+    const data = {
+      phone: phone,
+      password: password,
+    };
 
     try {
-      const response = await fetch('http://ec2-52-66-236-58.ap-south-1.compute.amazonaws.com:8201/naunidh/astro_signin', {
+      const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+
       const result = await response.json();
 
       if (response.ok) {
-        setResponseMessage('Sign-up successful!');
-        // Optionally: save a token or navigate the user
+        setResponseMessage('Sign-in successful!');
+        console.log(result);
       } else {
         setResponseMessage(`Error: ${result.message}`);
       }
     } catch (error) {
       setResponseMessage('Failed to connect to the server.');
+      console.log(error);
+    } finally {
+      setIsLoading(false); // Reset loading state
     }
   };
-
 
   return (
     <div className="flex items-center justify-center h-screen relative bg-[url(/a2.jpg)] bg-cover bg-center bg-no-repeat">
@@ -53,7 +60,7 @@ const SignIn = () => {
           </div>
 
           <div className="mt-10 w-full ">
-            <form action="#" method="POST" className="space-y-6" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="phone"
@@ -113,9 +120,15 @@ const SignIn = () => {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-600 duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign in
+                  {isLoading ? 'Signing in...' : 'Sign in'}
                 </button>
               </div>
+
+              {responseMessage && (
+                <div className="mt-4 text-center text-sm text-red-500">
+                  {responseMessage}
+                </div>
+              )}
             </form>
 
             <p className="mt-10 text-center text-sm text-white">
@@ -129,6 +142,7 @@ const SignIn = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );
