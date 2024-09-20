@@ -53,13 +53,13 @@ const Hero = () => {
         </div>
         <div className="relative w-full mt-10 flex flex-wrap items-center justify-center gap-4 ">
           {data.map((item) => (
-            <div className={`bg-white md:w-60 md:h-36 w-40 h-36 group p-3 grid place-items-center hover:bg-yellow-500 cursor-pointer duration-300 rounded-lg`}>
+            <div className={`bg-yellow-500 bg-opacity-5 backdrop-blur-sm border border-yellow-500 md:w-60 md:h-36 w-40 h-36 group p-3 grid place-items-center hover:bg-yellow-500 cursor-pointer duration-300 rounded-lg`}>
               <div className="flex items-center justify-center shadow-lg bg-white w-16 h-16 p-2 rounded-full">
 
               <img src={item.image} alt="" className="md:w-14 w-10 "/>
               </div>
 
-              <p className={`group-hover:text-white text-center text-black`}>{item.title}</p>
+              <p className={`group-hover:text-white text-center text-yellow-500`}>{item.title}</p>
             </div>
           ))}
         </div>
