@@ -55,28 +55,28 @@ const Footer = () => {
 
             <ul className="mt-8 flex gap-4">
               <Link>
-                <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
+                <li className="bg-white w-10 h-10 p-2 hover:scale-110 duration-200 flex items-center justify-center rounded-full">
                   <img src="/facebook.png" alt="" className="w-8" />
                 </li>
               </Link>
 
               <Link>
-                <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
+                <li className="bg-white w-10 h-10 p-2 hover:scale-110 duration-200 flex items-center justify-center rounded-full">
                   <img src="/x.png" alt="" className="w-8" />
                 </li>
               </Link>
               <Link>
-                <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
+                <li className="bg-white w-10 h-10 p-2 hover:scale-110 duration-200 flex items-center justify-center rounded-full">
                   <img src="/instagram.png" alt="" className="w-8" />
                 </li>
               </Link>
               <Link>
-                <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
+                <li className="bg-white w-10 h-10 p-2 hover:scale-110 duration-200 flex items-center justify-center rounded-full">
                   <img src="/youtube.png" alt="" className="w-8" />
                 </li>
               </Link>
               <Link>
-                <li className="bg-white w-10 h-10 p-2 flex items-center justify-center rounded-full">
+                <li className="bg-white w-10 h-10 p-2 hover:scale-110 duration-200 flex items-center justify-center rounded-full">
                   <img src="/linkedin.png" alt="" className="w-8" />
                 </li>
               </Link>

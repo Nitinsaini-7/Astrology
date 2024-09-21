@@ -93,17 +93,22 @@ const OurAstrologer = () => {
 
   return (
     <div>
-      <div className="flex md:items-center md:justify-center p-2 w-full md:gap-20 gap-2 overflow-x-scroll no-scrollbar">
+      <div className="flex pt-10 md:justify-center p-2 w-full md:gap-20 gap-2 overflow-x-scroll no-scrollbar">
         {data.map((item, index) => (
           <div key={index} className="">
             <div>
               <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center bg-white w-14 h-14 rounded-full shadow-md">
-                  <img src={item.image} alt="" className="w-10" />
+                <div className="flex items-center justify-center group bg-white w-14 h-14 rounded-full shadow-md">
+                <Link to={item.link}  onClick={() => {
+                    window.scroll(0, 0);
+                  }}>
+                <img src={item.image} alt="" className="w-10 group-hover:scale-110 cursor-pointer duration-200" />
+
+                </Link>
                 </div>
               </div>
 
-              <div className="text-sm text-center flex items-center justify-center text-black">
+              <div className="text-sm text-center flex items-center justify-center text-black hover:text-white duration-200">
                 <Link
                   onClick={() => {
                     window.scroll(0, 0);
