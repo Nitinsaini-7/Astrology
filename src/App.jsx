@@ -6,6 +6,7 @@ import Product from "./components/Products/Product";
 import Blog from "./components/Blog/Blog";
 import WhatAstrology from "./components/WhatAstrology/WhatAstrology";
 import WhyAstrology from "./components/WhyAstrology/WhyAstrology";
+import OtherServices from "./components/OtherServicer/OtherServices";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero/>
       <div className="relative bg-[url(/back.jpg)] bg-cover w-full bg-fixed">
         <div className="bg-yellow-500 bg-opacity-40">
+          <OtherServices/>
           <OurAstrologer/>
           <AstrologyVideo/>
           <Product/>

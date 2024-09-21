@@ -29,13 +29,14 @@ const Hero = () => {
     <div className=" w-full pb-2 -mb-2">
       <section className="relative bg-[url(/a2.jpg)] bg-cover bg-center bg-no-repeat h-screen">
         <div className="absolute inset-0 bg-black md:bg-opacity-50 bg-opacity-40"></div>
+        <div className="flex items-center justify-center">
 
         <div className="relative pt-32  mx-auto max-w-screen-xl md:flex md:justify-center md:items-center px-4  sm:px-6 lg:flex  lg:items-center lg:justify-center lg:gap-40 lg:px-8">
           <div className="flex items-center justify-center">
             <img
               src="/spin.png"
               alt=""
-              className="md:w-80 w-64 animate-spin-slow "
+              className="md:w-96 w-72 animate-spin-slow "
             />
           </div>
           <div className="max-w-xl lg:text-center text-center  md:text-left ltr:sm:text-left rtl:sm:text-right">
@@ -49,20 +50,22 @@ const Hero = () => {
             </p>
 
            
-          </div>
-        </div>
         <div className="relative w-full mt-10 flex flex-wrap items-center justify-center gap-4 ">
           {data.map((item) => (
-            <div className={`bg-yellow-500 bg-opacity-5 backdrop-blur-sm border border-yellow-500 md:w-60 md:h-36 w-40 h-36 group p-3 grid place-items-center hover:bg-yellow-500 cursor-pointer duration-300 rounded-lg`}>
-              <div className="flex items-center justify-center shadow-lg bg-white w-16 h-16 p-2 rounded-full">
+            <div className={`bg-yellow-500 bg-opacity-5 border border-yellow-500 w-32 h-24 group p-3 grid place-items-center hover:backdrop-blur-md cursor-pointer duration-300 rounded-lg`}>
+              <div className="flex items-center justify-center shadow-lg bg-white w-10 h-10 p-2 rounded-full">
 
               <img src={item.image} alt="" className="md:w-14 w-10 "/>
               </div>
 
-              <p className={`group-hover:text-white text-center text-yellow-500`}>{item.title}</p>
+              <p className={`group-hover:text-white text-center text-yellow-500 text-sm`}>{item.title}</p>
             </div>
           ))}
         </div>
+          </div>
+        </div>
+        </div>
+
 
       </section>
     </div>

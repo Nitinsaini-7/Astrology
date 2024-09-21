@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -23,39 +21,6 @@ const astrologerData = [
 ];
 
 const OurAstrologer = () => {
-  const data = [
-    {
-      image: "/om.png",
-      title: "Today's Panchang",
-      link: "/",
-    },
-    {
-      image: "/ganesha.png",
-      title: "Free Janam Kundali",
-      link: "/janam-kundali",
-    },
-    {
-      image: "/kundli.png",
-      title: "Kundali Matching",
-      link: "/kundali-matching",
-    },
-    {
-      image: "/astrology.png",
-      title: "Products",
-      link: "/product-details",
-    },
-    {
-      image: "/horoscope.png",
-      title: "Free Daily Horoscope",
-      link: "/",
-    },
-    {
-      image: "/blog.png",
-      title: "Astrology Blog",
-      link: "/blog",
-    },
-  ];
-
   let settings = {
     dots: true,
     infinite: true,
@@ -93,36 +58,6 @@ const OurAstrologer = () => {
 
   return (
     <div>
-      <div className="flex pt-10 md:justify-center p-2 w-full md:gap-20 gap-2 overflow-x-scroll no-scrollbar">
-        {data.map((item, index) => (
-          <div key={index} className="">
-            <div>
-              <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center group bg-white w-14 h-14 rounded-full shadow-md">
-                <Link to={item.link}  onClick={() => {
-                    window.scroll(0, 0);
-                  }}>
-                <img src={item.image} alt="" className="w-10 group-hover:scale-110 cursor-pointer duration-200" />
-
-                </Link>
-                </div>
-              </div>
-
-              <div className="text-sm text-center flex items-center justify-center text-black hover:text-white duration-200">
-                <Link
-                  onClick={() => {
-                    window.scroll(0, 0);
-                  }}
-                  to={item.link}
-                  className="w-28"
-                >
-                  {item.title}
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
       <div className="flex items-center justify-center py-10">
         <span className=" px-1 py-4 bg-yellow-500 mr-1"></span>
         <h1 className="text-3xl font-bold uppercase text-black">
@@ -163,7 +98,9 @@ const OurAstrologer = () => {
 
                     <div className="flex items-center justify-center">
                       <div>
-                        <p className="text-yellow-500 text-xl font-semibold">About Astrologer -</p>
+                        <p className="text-yellow-500 text-xl font-semibold">
+                          About Astrologer -
+                        </p>
                         <div className="text-3xl text-yellow-500 text-left leading-tight h-3">
                           “
                         </div>
