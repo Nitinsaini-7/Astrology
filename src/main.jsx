@@ -29,6 +29,9 @@ import Blog1 from "./components/Blog/Blog1";
 import Blog3 from "./components/Blog/Blog3";
 import Blog4 from "./components/Blog/Blog4";
 import Profile from "./components/Profile/Profile";
+import UserDashboard from "./components/Profile/Profile";
+import AstrologerProfile from "./components/Profile/Profile";
+import Dashboard from "./components/Profile/Profile";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -48,7 +51,7 @@ const router = createHashRouter(
         <Route path="/blog-2" element={<Blog2 />} />
         <Route path="/blog-3" element={<Blog3 />} />
         <Route path="/blog-4" element={<Blog4 />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Dashboard />} />
 
       </Route>
       <Route path="/signin" element={<SignIn />} />
