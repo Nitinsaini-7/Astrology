@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const SignUp = () => {
+
+  const [name, setName] =useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+
+  let sentdata ={
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body:JSON.stringify({
+      name  : name,
+      phone : phone,
+      password : password,
+  })
+  }
+
+  const HandleInput = async(e) =>{
+    e.preventDefault();
+    const data = await fetch("https://naunidh.shreeradhatechnology.com/naunidh/astro_signup",sentdata)
+    // .then((response) => response.json())
+    // .then((json) => console.log(json));
+    alert("Account created")
+}
+
+
   return (
     <div className="flex items-center justify-center h-screen relative bg-[url(/a2.jpg)] bg-cover bg-center bg-no-repeat">
       <div className="md:w-2/5 w-full mx-4">
@@ -25,7 +52,7 @@ const SignUp = () => {
           </div>
 
           <div className="mt-10 w-full">
-            <form action="#" method="POST" className="space-y-6">
+            <form action="#" method="POST" className="space-y-6" onSubmit={HandleInput}>
               <div>
                 <label
                   htmlFor="email"
@@ -38,6 +65,7 @@ const SignUp = () => {
                     id="name"
                     name="name"
                     type="text"
+                    onChange={(e) => setName(e.target.value)}
                     required
                     placeholder="Name"
                     autoComplete="name"
@@ -55,12 +83,13 @@ const SignUp = () => {
                 </label>
                 <div className="mt-2">
                   <input
-                    id="mobile"
-                    name="mobile"
+                    id="phone"
+                    name="phone"
                     type="tel"
                     required
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="Mobile No."
-                    autoComplete="mobile"
+                    autoComplete="tel"
                     className="block w-full focus:outline-none focus:shadow-lg bg-transparent rounded-md border-0 p-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -79,6 +108,7 @@ const SignUp = () => {
                   <input
                     id="password"
                     name="password"
+                    onChange={(e) => setPassword(e.target.value)}
                     type="password"
                     placeholder="Password"
                     required
