@@ -56,13 +56,13 @@ const AstrologerProfile = ({ profile, onSave }) => {
 
   return (
     <div className="p-4 bg-white rounded shadow-md">
-      <div className="flex items-center space-x-4">
-        <div className="relative h-60 w-60 m-8">
+      <div className="sm:flex items-center space-x-4">
+        <div className="relative h-60 w-60 sm:m-10 m-auto">
           <div className="bg-gray-200 rounded-full">
             <img
               src={avatarURL}
               alt="Avatar"
-              className="h-60 w-60 rounded-full border-2 border-yellow-500"
+              className="sm:h-60 sm:w-60 rounded-full border-2 border-yellow-500"
             />
           </div>
 
@@ -83,7 +83,7 @@ const AstrologerProfile = ({ profile, onSave }) => {
             />
           </form>
         </div>
-        <div className="">
+        <div className="mt-10">
           {isEditing ? (
             <div className="grid mb-5">
                 <label htmlFor="" className="font-semibold">Edit Name</label>
@@ -97,7 +97,7 @@ const AstrologerProfile = ({ profile, onSave }) => {
                 />
             </div>
           ) : (
-            <p className="text-5xl font-semibold">{formData.name}</p>
+            <p className="sm:text-5xl text-2xl font-semibold">{formData.name}</p>
           )}
 
           {isEditing ? (
@@ -114,7 +114,7 @@ const AstrologerProfile = ({ profile, onSave }) => {
                   />
               </div>
           ) : (
-            <p className="text-gray-500 text-2xl py-2">
+            <p className="text-gray-500 sm:text-2xl text-xl py-2">
               Experience: {formData.experience} years
             </p>
           )}
@@ -126,7 +126,7 @@ const AstrologerProfile = ({ profile, onSave }) => {
 
       <div>
       {isEditing ? (
-           <div className="grid">
+           <div className="grid ml-4 mt-4">
             <label htmlFor="" className="font-semibold">Edit About</label>
             <textarea
               type="text"
@@ -138,8 +138,8 @@ const AstrologerProfile = ({ profile, onSave }) => {
             />
            </div>
           ) : (
-            <p className=" text-lg text-black">
-              <span className="text-2xl font-semibold">About Me</span> <br />
+            <p className=" text-lg text-black sm:ml-16 ml-4 mt-4">
+              <span className="sm:text-2xl text-lg font-semibold">About Me</span> <br />
               {formData.about}
             </p>
           )}
@@ -162,7 +162,7 @@ const AstrologerProfile = ({ profile, onSave }) => {
         </div>
       ) : (
         <button
-          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+          className="mt-4 sm:ml-16 ml-4 bg-blue-500 text-white px-4 py-2 rounded"
           onClick={() => setIsEditing(true)}
         >
           Edit Profile
