@@ -57,7 +57,7 @@ import AstrologerProfile from '../UserDashboard/AstrologerProfile';
 import KycDocuments from '../UserDashboard/KYCDocuments';
 
 
-const Dashboard = () => {
+const Profile = () => {
   const [profile, setProfile] = useState({
     name: 'John Doe',
     experience: 10,
@@ -90,4 +90,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Profile;

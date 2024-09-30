@@ -29,9 +29,10 @@ import Blog1 from "./components/Blog/Blog1";
 import Blog3 from "./components/Blog/Blog3";
 import Blog4 from "./components/Blog/Blog4";
 import Profile from "./components/Profile/Profile";
-import UserDashboard from "./components/Profile/Profile";
-import AstrologerProfile from "./components/Profile/Profile";
-import Dashboard from "./components/Profile/Profile";
+import AdminDashboard from "./Admin Dashboard/AdminDashboard";
+import Dashboard from "./Admin Dashboard/components/Dashboard";
+import Astrologer from "./Admin Dashboard/components/Astrologer";
+import Customer from "./Admin Dashboard/components/Customer";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -51,12 +52,16 @@ const router = createHashRouter(
         <Route path="/blog-2" element={<Blog2 />} />
         <Route path="/blog-3" element={<Blog3 />} />
         <Route path="/blog-4" element={<Blog4 />} />
-        <Route path="/profile" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
 
       </Route>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="*" element={<Error />} />
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/customers" element={<Customer />} />
+      <Route path="/astrologer" element={<Astrologer />} />
     </Route>
   )
 );
