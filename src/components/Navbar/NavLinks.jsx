@@ -5,10 +5,11 @@ import { links } from "./MyLinks";
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
+
   return (
     <>
-      {links.map((link) => (
-        <div>
+      {links.map((link, index) => (
+        <div key={index}>
           <div className=" px-2 text-left md:cursor-pointer group">
             <h1
               className="md:py-0 hover:text-yellow-500 duration-100 py-7 flex justify-between items-center md:pr-0 pr-5 group"
@@ -25,7 +26,7 @@ const NavLinks = () => {
                   }`}
                 ></ion-icon>
               </span>
-              <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
+              <span className="text-xl md:mt-1 md:ml-2 md:block hidden group-hover:rotate-180 group-hover:-mt-2">
                 <ion-icon name="chevron-down"></ion-icon>
               </span>
             </h1>
@@ -38,14 +39,17 @@ const NavLinks = () => {
                     mt-1 bg-yellow-100 rounded-sm  rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-yellow-100 rounded-sm  text-black p-2 px-10 grid grid-cols-1">
-                    {link.sublinks.map((mysublinks) => (
-                      <div>
+                  <div className="bg-yellow-100 rounded-sm text-black p-2 px-10 grid grid-cols-1">
+                    {link.sublinks.map((mysublinks, idx) => (
+                      <div key={idx}>
                         <h1 className="text-lg font-semibold">
                           {mysublinks.Head}
                         </h1>
-                        {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 hover:text-yellow-500 duration-300 my-2.5">
+                        {mysublinks.sublink.map((slink, subIdx) => (
+                          <li
+                            key={subIdx}
+                            className="text-sm text-gray-600 hover:text-yellow-500 duration-300 my-2.5"
+                          >
                             <Link
                               to={slink.link}
                               className="hover:text-primary"
@@ -62,14 +66,10 @@ const NavLinks = () => {
             )}
           </div>
           {/* Mobile menus */}
-          <div
-            className={`
-            ${heading === link.name ? "md:hidden" : "hidden"}
-          `}
-          >
+          <div className={`${heading === link.name ? "md:hidden" : "hidden"}`}>
             {/* sublinks */}
-            {link.sublinks.map((slinks) => (
-              <div>
+            {link.sublinks.map((slinks, index) => (
+              <div key={index}>
                 <div>
                   <h1
                     onClick={() =>
@@ -82,8 +82,8 @@ const NavLinks = () => {
                     {slinks.Head}
                   </h1>
                   <div className="bg-yellow-100 -mt-14 mr-5">
-                    {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-8">
+                    {slinks.sublink.map((slink, subIndex) => (
+                      <li key={subIndex} className="py-3 pl-8">
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}

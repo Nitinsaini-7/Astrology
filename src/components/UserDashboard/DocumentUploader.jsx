@@ -1,12 +1,14 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const DocumentUploader = ({ docType, onUpload }) => {
   const fileInputRef = useRef(null);
+  const [imagePreview, setImagePreview] = useState(null); // State to store image preview URL
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
       onUpload(file, docType);
+      setImagePreview(URL.createObjectURL(file)); // Create a preview URL for the image
     }
   };
 
@@ -24,6 +26,16 @@ const DocumentUploader = ({ docType, onUpload }) => {
         onChange={handleFileUpload}
         className="hidden"
       />
+
+      {imagePreview && (
+        <div className="mt-4">
+          <img
+            src={imagePreview}
+            alt="Uploaded Preview"
+            className="w-20 object-cover rounded"
+          />
+        </div>
+      )}
     </>
   );
 };

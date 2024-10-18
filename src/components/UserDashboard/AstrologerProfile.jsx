@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import DefaultImage from "/user.png";
 import EditIcon from "/edit.png";
 import UploadingAnimation from "/uploading.gif";
-import { useRef } from "react";
 
 const AstrologerProfile = ({ profile, onSave }) => {
+  // Load profile data from localStorage, or fall back to the passed-in profile
+  const [formData, setFormData] = useState(() => {
+    const savedProfile = localStorage.getItem("astrologerProfile");
+    return savedProfile ? JSON.parse(savedProfile) : profile;
+  });
+
+  // Load avatar URL from localStorage, fallback to DefaultImage
+  const [avatarURL, setAvatarURL] = useState(() => {
+    const savedAvatarURL = localStorage.getItem("astrologerAvatar");
+    return savedAvatarURL || DefaultImage;
+  });
+
   const [isEditing, setIsEditing] = useState(false);
-  const [formData, setFormData] = useState(profile);
+  const fileUploadRef = useRef();
+
+  // Sync formData with localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("astrologerProfile", JSON.stringify(formData));
+  }, [formData]);
+
+  // Sync avatarURL with localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("astrologerAvatar", avatarURL);
+  }, [avatarURL]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +39,6 @@ const AstrologerProfile = ({ profile, onSave }) => {
     setIsEditing(false);
   };
 
-  const [avatarURL, setAvatarURL] = useState(DefaultImage);
-
-  const fileUploadRef = useRef();
-
   const handleImageUpload = (event) => {
     event.preventDefault();
     fileUploadRef.current.click();
@@ -29,10 +46,8 @@ const AstrologerProfile = ({ profile, onSave }) => {
 
   const uploadImageDisplay = async () => {
     try {
-      setAvatarURL(UploadingAnimation);
+      setAvatarURL(UploadingAnimation); // Show uploading animation while uploading
       const uploadedFile = fileUploadRef.current.files[0];
-      // const cachedURL = URL.createObjectURL(uploadedFile);
-      // setAvatarURL(cachedURL);
       const formData = new FormData();
       formData.append("file", uploadedFile);
 
@@ -46,11 +61,11 @@ const AstrologerProfile = ({ profile, onSave }) => {
 
       if (response.status === 201) {
         const data = await response.json();
-        setAvatarURL(data?.location);
+        setAvatarURL(data?.location); // Set new avatar URL
       }
     } catch (error) {
       console.error(error);
-      setAvatarURL(DefaultImage);
+      setAvatarURL(DefaultImage); // Fallback to default image in case of error
     }
   };
 
@@ -86,33 +101,32 @@ const AstrologerProfile = ({ profile, onSave }) => {
         <div className="mt-10">
           {isEditing ? (
             <div className="grid mb-5">
-                <label htmlFor="" className="font-semibold">Edit Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="border-b mr-5 border-gray-300  text-gray-500 focus:outline-none"
-                />
+              <label htmlFor="" className="font-semibold">Edit Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="border-b mr-5 border-gray-300 text-gray-500 focus:outline-none"
+              />
             </div>
           ) : (
             <p className="sm:text-5xl text-2xl font-semibold">{formData.name}</p>
           )}
 
           {isEditing ? (
-              <div className="grid ">
-
-                  <label htmlFor="" className="font-semibold">Edit Experience</label>
-                  <input
-                    type="number"
-                    name="experience"
-                    placeholder="Experience"
-                    value={formData.experience}
-                    onChange={handleInputChange}
-                    className="border-b border-gray-300 focus:outline-none"
-                  />
-              </div>
+            <div className="grid ">
+              <label htmlFor="" className="font-semibold">Edit Experience</label>
+              <input
+                type="number"
+                name="experience"
+                placeholder="Experience"
+                value={formData.experience}
+                onChange={handleInputChange}
+                className="border-b border-gray-300 focus:outline-none"
+              />
+            </div>
           ) : (
             <p className="text-gray-500 sm:text-2xl text-xl py-2">
               Experience: {formData.experience} years
@@ -125,8 +139,8 @@ const AstrologerProfile = ({ profile, onSave }) => {
       </div>
 
       <div>
-      {isEditing ? (
-           <div className="grid ml-4 mt-4">
+        {isEditing ? (
+          <div className="grid ml-4 mt-4">
             <label htmlFor="" className="font-semibold">Edit About</label>
             <textarea
               type="text"
@@ -136,13 +150,14 @@ const AstrologerProfile = ({ profile, onSave }) => {
               onChange={handleInputChange}
               className="border-b border-gray-300 focus:outline-none resize-none w-96"
             />
-           </div>
-          ) : (
-            <p className=" text-lg text-black sm:ml-16 ml-4 mt-4">
-              <span className="sm:text-2xl text-lg font-semibold">About Me</span> <br />
-              {formData.about}
-            </p>
-          )}
+          </div>
+        ) : (
+          <p className="text-lg text-black sm:ml-16 ml-4 mt-4">
+            <span className="sm:text-2xl text-lg font-semibold">About Me</span>
+            <br />
+            {formData.about}
+          </p>
+        )}
       </div>
 
       {isEditing ? (
