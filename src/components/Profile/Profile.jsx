@@ -32,13 +32,13 @@ const Profile = () => {
 
   return (
     <div className="container mx-auto p-4 my-20">
-      {isLoggedIn ? (
+      {!isLoggedIn ? (
         <>
           <AstrologerProfile profile={profile} onSave={handleSaveProfile} />
           <KycDocuments documents={documents} onUpload={handleUploadDocument} />
         </>
       ) : (
-        <SignIn onLogin={() => setIsLoggedIn(true)} /> // Show SignIn when logged out
+        <SignIn onLogin={() => setIsLoggedIn(false)} /> // Show SignIn when logged out
       )}
     </div>
   );
