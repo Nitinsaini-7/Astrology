@@ -1,34 +1,44 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const SignUp = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate(); // Hook to programmatically navigate
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  let sentdata = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-      phone: phone,
-      email: email,
-      password: password,
-    }),
-  };
-
   const HandleInput = async (e) => {
     e.preventDefault();
-    const data = await fetch(
-      "https://naunidh.shreeradhatechnology.com/naunidh/astro_signup",
-      sentdata
-    );
-    // .then((response) => response.json())
-    // .then((json) => console.log(json));
-    alert("Account created");
+    const sentdata = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, phone, email, password }),
+    };
+
+    try {
+      const response = await fetch(
+        "https://naunidh.shreeradhatechnology.com/naunidh/astro_signup",
+        sentdata
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        login(result.user); // Assuming the response contains user data
+        alert("Account created successfully");
+        navigate('/profile'); // Navigate to profile page
+      } else {
+        alert(`Error: ${result.message}`);
+      }
+    } catch (error) {
+      alert('Failed to connect to the server.');
+      console.log(error);
+    }
   };
 
   return (

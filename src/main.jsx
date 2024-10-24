@@ -8,7 +8,7 @@ import {
   Route,
   RouterProvider,
   HashRouter,
-  createHashRouter
+  createHashRouter,
 } from "react-router-dom";
 import OurAstrologer from "./components/OurAstrologers/OurAstrologer";
 import AstrologyVideo from "./components/AstrologyVideo/AstrologyVideo";
@@ -33,6 +33,7 @@ import AdminDashboard from "./Admin Dashboard/AdminDashboard";
 import Dashboard from "./Admin Dashboard/components/Dashboard";
 import Astrologer from "./Admin Dashboard/components/Astrologer";
 import Customer from "./Admin Dashboard/components/Customer";
+import { AuthProvider } from "./context/AuthContext";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -53,7 +54,6 @@ const router = createHashRouter(
         <Route path="/blog-3" element={<Blog3 />} />
         <Route path="/blog-4" element={<Blog4 />} />
         <Route path="/profile" element={<Profile />} />
-
       </Route>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
@@ -67,6 +67,8 @@ const router = createHashRouter(
 );
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

@@ -1,20 +1,54 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const SignIn = () => {
+  const {login} = useAuth()
+  const navigate = useNavigate()
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault(); // Prevent page reload
+  //   setIsLoading(true); // Set loading state
+
+  //   const data = {
+  //     phone: phone,
+  //     password: password,
+  //   };
+
+  //   try {
+  //     const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+
+  //     const result = await response.json();
+
+  //     if (response.ok) {
+  //       setResponseMessage('Sign-in successful!');
+  //       console.log(result);
+  //     } else {
+  //       setResponseMessage(`Error: ${result.message}`);
+  //     }
+  //   } catch (error) {
+  //     setResponseMessage('Failed to connect to the server.');
+  //     console.log(error);
+  //   } finally {
+  //     setIsLoading(false); // Reset loading state
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
     setIsLoading(true); // Set loading state
 
-    const data = {
-      phone: phone,
-      password: password,
-    };
+    const data = { phone, password };
 
     try {
       const response = await fetch('https://naunidh.shreeradhatechnology.com/naunidh/astro_signin', {
@@ -26,10 +60,13 @@ const SignIn = () => {
       });
 
       const result = await response.json();
-
+      
       if (response.ok) {
+        login(result.data); // Assuming the response contains user data
         setResponseMessage('Sign-in successful!');
-        console.log(result);
+        navigate('/profile'); // Navigate to profile page or home
+        console.log('User data:', result);
+        console.log('Result', result.data);
       } else {
         setResponseMessage(`Error: ${result.message}`);
       }
