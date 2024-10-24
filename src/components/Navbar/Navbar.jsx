@@ -120,12 +120,16 @@ const Navbar = () => {
             <Link to="/contact" className="py-7 px-3 hover:text-yellow-500 duration-100 inline-block">Contact</Link>
           </li>
           {/* Mobile Profile Icon */}
-          {user && (
+          {user ? (
             <li className="flex items-center">
               <Link to="/profile" className="hover:text-yellow-500">
                 <img src="/user.png" className="h-8 w-8 rounded-full" />
               </Link>
               <button onClick={logout} className="text-red-500 hover:text-yellow-500 ml-2">Logout</button>
+            </li>
+          ): (
+            <li>
+              <Link to="/signin" className="px-3 hover:text-yellow-500 duration-100 inline-block">Sign In</Link>
             </li>
           )}
         </ul>
