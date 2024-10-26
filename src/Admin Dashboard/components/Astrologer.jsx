@@ -1,101 +1,74 @@
-import React from "react";
-import { useState } from "react";
-import Toggle from "react-toggle";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import "react-toggle/style.css";
-import AdminNavbar from "./AdminNavbar";
 
 const Astrologer = () => {
-  const [profiles, setProfiles] = useState([
-    {
-      id: 1,
-      profileImg: "https://via.placeholder.com/50", // Sample image URL
-      name: "Aanchal",
-      contactNo: "Hidden In Demo",
-      email: "Hidden In Demo",
-      gender: "Male",
-      totalRequest: "0/0",
-      status: false, // false = Unverified, true = Verified
-    },
-    // Additional profiles can be added here if needed
-  ]);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Handle status toggle between Verified and Unverified
-  const handleToggleStatus = (id) => {
-    setProfiles((prevState) =>
-      prevState.map((profile) =>
-        profile.id === id ? { ...profile, status: !profile.status } : profile
-      )
-    );
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://naunidh.shreeradhatechnology.com/naunidh/admin_all_data");
+        const responseData = response.data.data || [];
+        console.log(response);
+        
+        console.log(responseData);
+        
+        setData(Array.isArray(responseData) ? responseData : []);
+      } catch (error) {
+        setError("An error occurred while fetching data.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div className="text-center p-4">Loading...</div>;
+  if (error) return <div className="text-red-500 text-center p-4">{error}</div>;
 
   return (
-    <div>
-      <AdminNavbar />
-
-      <div className="mt-20 sm:p-10 p-4">
-        <h1>Astrologer</h1>
-
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200 rounded-lg">
-            <thead>
-              <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                <th className="py-2 px-4 border">#</th>
-                <th className="py-2 px-4 border">PROFILE</th>
-                <th className="py-2 px-4 border">NAME</th>
-                <th className="py-2 px-4 border">CONTACT NO.</th>
-                <th className="py-2 px-4 border">EMAIL</th>
-                <th className="py-2 px-4 border">GENDER</th>
-                <th className="py-2 px-4 border">TOTAL REQUEST</th>
-                <th className="py-2 px-4 border">STATUS</th>
-                <th className="py-2 px-4 border">ACTIONS</th>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">API Data</h1>
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white">
+          <thead>
+            <tr>
+              <th className="px-4 py-2">ID</th>
+              <th className="px-4 py-2">Full Name</th>
+              <th className="px-4 py-2">Aadhar No</th>
+              <th className="px-4 py-2">Email</th>
+              <th className="px-4 py-2">Phone</th>
+              <th className="px-4 py-2">DOB</th>
+              <th className="px-4 py-2">Place</th>
+              <th className="px-4 py-2">Experience</th>
+              <th className="px-4 py-2">Profile Image</th>
+              {/* Add more headers as needed based on the response data structure */}
+            </tr>
+          </thead>
+          <tbody>
+            {data.slice(1).map((item, index) => (
+              <tr key={index} className="border-b">
+                <td className="px-4 py-2">{item.id}</td>
+                <td className="px-4 py-2">{item.full_name || "N/A"}</td>
+                <td className="px-4 py-2">{item.aadhar_no || "N/A"}</td>
+                <td className="px-4 py-2">{item.email || "N/A"}</td>
+                <td className="px-4 py-2">{item.phone || "N/A"}</td>
+                <td className="px-4 py-2">{item.dob || "N/A"}</td>
+                <td className="px-4 py-2">{item.place || "N/A"}</td>
+                <td className="px-4 py-2">{item.experience || "N/A"}</td>
+                <td className="px-4 py-2">
+                  {item.profile_image ? (
+                    <img src={item.profile_image} alt="Profile" className="h-10 w-10 rounded-full" />
+                  ) : "N/A"}
+                </td>
+                {/* Add more cells as needed based on the response data structure */}
               </tr>
-            </thead>
-            <tbody>
-              {profiles.map((profile, index) => (
-                <tr key={profile.id}>
-                  <td className="py-2 px-4 border text-center">{index + 1}</td>
-                  <td className="py-2 px-4 border text-center">
-                    <img
-                      src={profile.profileImg}
-                      alt={profile.name}
-                      className="w-12 h-12 rounded-full"
-                    />
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    {profile.name}
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    {profile.contactNo}
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    {profile.email}
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    {profile.gender}
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    {profile.totalRequest}
-                  </td>
-                  <td className="py-2 px-4 border text-center sm:flex items-center justify-center gap-2">
-                    {profile.status ? "Verified" : "Unverified"}
-                    <Toggle
-                      defaultChecked={profile.status}
-                      onChange={() => handleToggleStatus(profile.id)}
-                    />
-                  </td>
-                  <td className="py-2 px-4 border text-center">
-                    <button className="bg-blue-500 text-white px-2 py-1 rounded mr-2">
-                      Edit
-                    </button>
-                    <button className="bg-green-500 text-white px-2 py-1 rounded">
-                      View
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
