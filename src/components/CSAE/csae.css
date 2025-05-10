@@ -1,0 +1,104 @@
+/* App.css */
+
+/* Base Reset & Typography */
+/*  */
+
+/* Layout Container */
+.container {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #fcd34d;
+  padding: 20px;
+  text-align: center;
+  color: #7c4700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #b45309;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+a {
+  color: #b45309;
+  text-decoration: underline;
+}
+
+/* Report Section */
+.report {
+  background-color: #fde68a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 14px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .report {
+    padding: 15px;
+  }
+}

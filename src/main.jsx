@@ -34,6 +34,7 @@ import Dashboard from "./Admin Dashboard/components/Dashboard";
 import Astrologer from "./Admin Dashboard/components/Astrologer";
 import Customer from "./Admin Dashboard/components/Customer";
 import { AuthProvider } from "./context/AuthContext";
+import CSAE from "./components/CSAE/csae"
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -54,6 +55,7 @@ const router = createHashRouter(
         <Route path="/blog-3" element={<Blog3 />} />
         <Route path="/blog-4" element={<Blog4 />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/CSAE" element={<CSAE />} />
       </Route>
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
